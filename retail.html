@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swastik Associate</title>
+  <!--Stylesheet -->
+  <link href="/style.css" rel="stylesheet">
+  <script src="script.js" defer></script>
+  <!-- Icon Font Stylesheet -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <header>
+    <!-- Logo -->
+    <div class="logo">
+      <img src="/Images/Sawastik Logo.png" alt="Logo" />
+    </div>
+
+    <!-- Menu Toggle (Hamburger) -->
+    <div class="menu-toggle" id="menuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navMenu">
+      <a href="index.html" >Home</a>
+      <a href="about.html">About</a>
+
+      <div class="dropdown">
+        <span class="dropdown-btn">Product ▾</span>
+        <div class="dropdown-content">
+          <a href="retail.html"class="active">Retail</a>
+          <a href="wholesales.html">Wholesales</a>
+          <a href="mobileApplication.html">Mobile Application</a>
+          <a href="crm.html">CRM</a>
+          <a href="website.html">Website</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <span class="dropdown-btn">Help Desk ▾</span>
+        <div class="dropdown-content">
+          <a href="https://swastikngp.salestack.in/customerportal">Complaint</a>
+          <a href="#">Pay Online</a>
+        </div>
+      </div>
+
+      <a href="contact.html" class="contact-btn">Contact</a>
+      <button id="loginBtn">Login</button>
+    </nav>
+  </header>
+  <div class="circle-containerpro">
+    <!-- Example Circle Item with Dropdown -->
+    <div class="circle-itempro">
+      <div class="circlepro" data-target="details-pharmacy">
+        <img src="Images/pharblack.png" alt="Pharma & Healthcare">
+      </div>
+      <p>Pharmacy</p>
+    </div>
+
+    <!-- Repeat for other circles -->
+    <div class="circle-itempro">
+      <div class="circlepro" data-target="details-pos">
+        <img src="Images/POSIMG.png" alt="FMCG">
+      </div>
+      <p>POS</p>
+    </div>
+
+    <div class="circle-itempro">
+      <div class="circlepro" data-target="details-supermarket">
+        <img src="Images/supermarket1.png" alt="Automobile">
+      </div>
+      <p>SuperMarket</p>
+    </div>
+
+    <div class="circle-itempro">
+      <div class="circlepro" data-target="details-jewellery">
+        <img src="Images/jewellary.png" alt="Warehouse">
+      </div>
+      <p>Jewellery</p>
+    </div>
+
+    <div class="circle-itempro">
+      <div class="circlepro" data-target="details-restaurant">
+        <img src="Images/resto1.png" alt="Mandi (AADHAT)">
+      </div>
+      <p>Restaurant</p>
+    </div>
+
+    <div class="circle-itempro">
+      <div class="circlepro" data-target="details-garment">
+        <img src="Images/garment.png" alt="Electronic Appliances">
+      </div>
+      <p>Garment </p>
+    </div>
+
+    <div class="circle-itempro">
+      <div class="circlepro" data-target="details-retailshop">
+        <img src="Images/retailshop.png" alt="Jewellery">
+      </div>
+      <p>Retail Shop</p>
+    </div>
+
+    <div class="circle-itempro">
+      <div class="circlepro" data-target="details-kirana">
+        <img src="Images/grocery.png" alt="Textile & Apparel">
+      </div>
+      <p>Kirana/Glocery</p>
+    </div>
+
+    <div class="circle-itempro">
+      <div class="circlepro" data-target="details-depart">
+        <img src="Images/departmental.png" alt="Import/Export Trading">
+      </div>
+      <p>Departmental</p>
+    </div>
+
+    <div class="circle-itempro">
+      <div class="circlepro" data-target="details-salonspa">
+        <img src="Images/salonspa.png" alt="Import/Export Trading">
+      </div>
+      <p>Salon & Spa</p>
+    </div>
+
+    <div class="circle-itempro">
+      <div class="circlepro" data-target="details-bookstore">
+        <img src="Images/bookstore.png" alt="Import/Export Trading">
+      </div>
+      <p>Book Store</p>
+    </div>
+    <div class="circle-itempro">
+      <div class="circlepro" data-target="details-footwear">
+        <img src="Images/footwear.png" alt="Import/Export Trading">
+      </div>
+      <p>Footwear</p>
+    </div>
+    <!-- Add same structure for all 12 items -->
+  </div>
+
+
+  <div class="main-container">
+    <!-- Left side details area -->
+    <div class="product-details" id="productDetails">
+      <div id="details-pharmacy" class="detail-box active">
+        <h2>
+          <i class="fas fa-notes-medical"></i> Pharmacy Software
+        </h2>
+        <ul>
+          <li><strong>Easy & Fast Billing:</strong>
+            Improve Billing Speed by 40% with Touch Screen, POS, Barcode scanning, multiple billing counters, etc.</li>
+          <li><strong>GST Compliant:</strong>
+            With Pharmacy software, simplify your GST billing in a few clicks. Create GST Invoices & upload them to the
+            GSTN portal in Excel, JSON or CSV Format.</li>
+          <li><strong>Easy Accounting:</strong>
+            Manage finances effortlessly with Marg Pharmacy Software. From billing to balance sheet, track expenses,
+            stay audit-ready, and stay organized.</li>
+          <li><strong>ERP-to-ERP Order:</strong>
+            Directly place Online Orders from your ERP Software to the distributors ERP Software. Compare & grab the
+            best deals from different distributors with ease.</li>
+          <li><strong>Expiry Management:</strong>
+            Keep a track of expired & near expiry products sitting at your shelves. Return the products to the supplier
+            before expiry & save 100% losses due to expiry </li>
+
+        </ul>
+      </div>
+      <div id="details-pos" class="detail-box">
+        <h2><i class="fas fa-cash-register"></i> POS Software</h2>
+        <ul>
+          <li><strong>Touch Screen Machine:</strong>
+            Bill instantly with increased efficiency using the Touch Screen POS system. Evaluate your daily reports, get
+            complete customer history, track products in a click & much more</li>
+          <li><strong>Barcode Management:</strong>
+            Design & Print barcode labels to add SKUs, Serial No., Batch No. etc. Track products easily with different
+            types of barcode scanners & search options with our smart POS billing software for retail shops.</li>
+          <li><strong>Inventory Management:</strong>
+            Track your stock, set reorder points, and keep inventory up to date. Marg free POS software with inventory
+            tracking helps to streamline your entire business</li>
+          <li><strong>Re-Order Management:</strong>
+            Know the Fast, Slow, and non-moving products in your store. Set Reorder points based on Product Sales/
+            Profit/Stock level & Calculations by using our retail POS software. </li>
+        </ul>
+      </div>
+
+      <div id="details-supermarket" class="detail-box">
+        <h2><i class="fas fa-shopping-basket"></i> SuperMarket Software</h2>
+        <ul>
+          <li><strong>Rack Management:</strong>
+            Easily maintain stock of multiple items Rack-wise which helps to identify which item is kept in which rack
+            at the time of billing & generate Rack-wise stock reports </li>
+          <li><strong>Weighing Scale Attachment:</strong>
+            Pick the quantity automatically with one click from the weighing machine while billing at the counter. No
+            need to enter manually, it reduces the chances of errors.</li>
+          <li><strong>Cash Drawer:</strong>
+            With an advanced Cash Drawer management system, manage Cash Flow on each transaction with security. Set
+            user-wise power & boundations to control cash dealings with the best Supermarket software in India</li>
+          <li><strong>COnline Banking & Reconciliation:</strong>
+            Experience online banking inside Marg ERP integrated with ICICI bank. Manage all types of bank transactions
+            i.e NEFT, RTGS, etc. including auto bank reconciliation with 140+ banks</li>
+        </ul>
+      </div>
+      <div id="details-jewellery" class="detail-box">
+        <h2><i class="fas fa-crown"></i> Jewellery Software</h2>
+        <ul>
+          <li><strong>Stock with Product Catalogue:</strong>
+            Manage Stock with product Catalogue on the basis of images, carat, weight, item code, purity, stock summary,
+            stock valuation- FIFO, Avg. Rate, G.P., Last Pur., Current Rate etc.</li>
+          <li><strong>Barcode & RFID wise Billing:</strong>
+            Easily speed up the Billing process by directly scanning barcode, RFID code & increase your sales by 40%
+            with ease. Split Tags at Sale point and create a separate tag</li>
+          <li><strong>Customer Jewellery Insurance:</strong>
+            Get customised insurance coverage by O-Locker for the beautiful & cherished jewellery of your customers.
+            Give assurance to your customer & help them get rid of all the fears associated with jewellery owing & using
+          </li>
+          <li><strong>Bhav Cutting:</strong>
+            Effortlessly transact through any metal- Gold/ Silver/ Diamond. Manage Ledger accounts with metal balance
+            along with Cash balance & receive payments accordingly. Get it instantly reflected into your accounts</li>
+        </ul>
+      </div>
+      <div id="details-restaurant" class="detail-box">
+        <h2><i class="fas fa-utensils"></i> Features Of Restaurant Billing Software</h2>
+        <ul>
+          <li><strong> Zomato & Swiggy Integration:</strong>
+            Receive orders directly on Marg ERP, seamlessly update product lists on both platforms, auto-generate bills
+            with one click, and enjoy hassle-free management.</li>
+          <li><strong> Kitchen Order Tickets:</strong>
+            Simple & Easy to use KOT system that includes information like the table number, the goods ordered, their
+            quantity, and any specific dining requests for preparation or service.</li>
+          <li><strong> Waiter Wise Report:</strong>
+            Generate a waiter-wise report for waiters including the names and other details of each waiter who works in
+            the restaurant. Also, export them in different formats (PDF, Excel, Word)
+          </li>
+          <li><strong>Loyalty & CRM Program/ Discount & Schemes:</strong>
+            Impress your customer with personalized offers, coupons, vouchers, and happy hours and make them come back
+            for more fun.</li>
+        </ul>
+      </div>
+      <div id="details-garment" class="detail-box">
+        <h2><i class="fas fa-tshirt"></i> Garment Billing Software</h2>
+        <ul>
+          <li><strong> Salesman Commission Report:</strong>
+            Generate Salesman Commission Report on a daily or monthly basis. Get insights into profit margins and
+            effectively plan your sales strategies to maximize revenues.</li>
+          <li><strong> Schemes & Discounts:</strong>
+            Attract more customers to increase your sales at your Garment store with multiple discounts & schemes
+            options like Item Discount, Bill Discount, Combo Offers, etc.
+          </li>
+          <li><strong> Rate wise GST:</strong>
+            Set different GST rates for different categories of Garments (5%, 12%, 18%, 28%). Eliminate the need for
+            manual calculations and minimizes the chances of errors, ensuring accurate GST compliance
+          </li>
+          <li><strong> GST Compliant Solution:</strong>
+            Experience easy e-invoicing & GST billing. Generate E-way bills; file GST returns, TCS & TDS directly
+            fromMarg Garment software. Run an internal audit to ensure 100% error-free reports
+          </li>
+        </ul>
+      </div>
+      <div id="details-retailshop" class="detail-box">
+        <h2><i class="fas fa-store"></i> Retail POS Software & Billing Solution for Shops</h2>
+        <ul>
+          <li><strong> Home Delivery:</strong>
+            Take orders online & reduce customers waiting time at the counters with hassle-free Home Delivery option &
+            provide 100% Safety assurance</li>
+          <li><strong> Expiry Management:</strong>
+            Keep a track of expired & near expiry products sitting at your shelves. Return the products to the supplier
+            before expiry & Save up to 20% of losses
+          </li>
+          <li><strong> Online Purchase Import:</strong>
+            No need to feed manual Purchase. Import bill from any Excel, CSV or PDF format to save time with 100%
+            accuracy & map items/products with existing items
+          </li>
+          <li><strong> eRetail Web Application:</strong>
+            View & compare nearby distributors along with items, schemes, offers etc & directly place online orders to
+            them. Also check status of all orders.
+          </li>
+        </ul>
+      </div>
+      <div id="details-kirana" class="detail-box">
+        <h2><i class="fas fa-shopping-cart"></i> Grocery/ Kirana Software</h2>
+        <ul>
+          <li><strong> Digital Payments:</strong>
+
+            Deal with tech-savvy customers by accepting digital payments through UPI, credit/ debit cards & wallets via
+            dynamic QR code & SMS link. Ensure no loss of revenue and Bill-by-bill Reconciliation with MargPay </li>
+          <li><strong> Online Banking & Reconciliation:</strong>
+
+            Experience online banking inside Marg ERP integrated with ICICI Bank. Manage all type of bank transactions
+            i.e. NEFT, RTGS etc. including Auto-Bank Reconciliation with 140+ Banks
+          </li>
+          <li><strong> Loyalty Point System:</strong>
+
+            Shopper loyalty rewards are an integral part of your Grocery store. Marg Grocery software has an inbuilt
+            option for points and discounts. Stay connected & encourage your customer to continue shopping with you by
+            giving Loyalty Points
+          </li>
+          <li><strong> Weighing Scale Attachment:</strong>
+
+            Pick the quantity automatically with one click from the weighing machine while billing at the counter. No
+            need to enter manually, reduce the chances of errors
+          </li>
+        </ul>
+      </div>
+      <div id="details-depart" class="detail-box">
+        <h2><i class="fas fa-tags"></i> Departmental GST Billing</h2>
+        <ul>
+          <li><strong> Sales Analysis on Google Map:</strong>
+            Track Your Sales through Google Satellite Map; Filter data- Date, Route, Company & Salesman wise. Find new
+            Customer & Grow your business.</li>
+          <li><strong> Auto-Cloud Backup:</strong>
+            Upload data online and directly store it in Google Drive/One Drive, Access the data from anywhere and
+            restore the backup as per the requirement.
+          </li>
+          <li><strong>Import Purchase:</strong>
+            Allow to import purchase from any excel or csv format to save your time with 100% accuracy
+          </li>
+          <li><strong>Reporting:</strong>
+            Stay on top of your finances with powerful 1000's of sales, purchase, inventory & accounting reports
+          </li>
+          </li>
+          <li><strong>Cashier and Home Delivery:</strong>
+            Cashier management and home delivery feature gives you 100% control on your business
+          </li>
+          <li><strong> E-Way Bill:</strong>
+            Easily generate E-way Bill after registering on GST Portal and upload each and every process related to
+            E-Way Bills on Portal itself.
+          </li>
+        </ul>
+      </div>
+      <div id="details-salonspa" class="detail-box">
+        <h2><i class="fas fa-cut"></i>
+          Salon & Spa Software </h2>
+        <ul>
+          <li><strong> Appointment Scheduling:</strong>
+            Schedule appointments for your clients date-wise, and time-wise to reduce customers' waiting time at
+            counters with our smart salon management software.</li>
+          <li><strong> Shift Management:</strong>
+            Create & define multiple shifts of employees/beauticians hour/date/day wise & assign duties with auto-shift
+            rotation.
+          </li>
+          <li><strong>Beauticians Records:</strong>
+            Manage & organize your employee’s records, qualities, and availability & leaves them all in one place to
+            never miss an appointment.
+          </li>
+          <li><strong> Client Record Management:</strong>
+            Client Record Management
+            Manage detailed client appointment history, booking preferences, future appointments, and contact details.
+          </li>
+          </li>
+          <li><strong>Send Notifications & Reminders:</strong>
+            Set reminders to customers regarding Appointments, follow-ups, outstandings, payments, etc to increase sales
+            by 30%
+          </li>
+          <li><strong> Discounts, Schemes, & Loyalty Points:</strong>
+            Attract more customers with flexible discounts, schemes, combo offers, rewards, loyalty points & vouchers.
+          </li>
+        </ul>
+      </div>
+      <div id="details-bookstore" class="detail-box">
+        <h2><i class="fas fa-book"></i> Bookstore GST Billing </h2>
+        <ul>
+          <li><strong> Sales Analysis on Google Map:</strong>
+            Track Your Sales through Google Satellite Map; Filter data- Date, Route, Company & Salesman wise. Find new
+            Customer & Grow your business.</li>
+          <li><strong> Auto-Cloud Backup:</strong>
+            Upload data online and directly store it in Google Drive/One Drive, Access the data from anywhere and
+            restore the backup as per the requirement.
+          </li>
+          <li><strong>Import Purchase:</strong>
+            Allow to import purchase from any excel or csv format to save your time with 100% accuracy
+          </li>
+          <li><strong>Reporting:</strong>
+            Stay on top of your finances with powerful 1000's of sales, purchase, inventory & accounting reports
+          </li>
+          </li>
+          <li><strong>Cashier and Home Delivery:</strong>
+            Cashier management and home delivery feature gives you 100% control on your business
+          </li>
+          <li><strong> E-Way Bill:</strong>
+            Easily generate E-way Bill after registering on GST Portal and upload each and every process related to
+            E-Way Bills on Portal itself.
+          </li>
+        </ul>
+      </div>
+      <div id="details-footwear" class="detail-box">
+        <h2><i class="fas fa-shoe-prints"></i> Footwear GST Billing </h2>
+        <ul>
+          <li><strong> Sales Analysis on Google Map:</strong>
+            Track Your Sales through Google Satellite Map; Filter data- Date, Route, Company & Salesman wise. Find new
+            Customer & Grow your business.</li>
+          <li><strong> Auto-Cloud Backup:</strong>
+            Upload data online and directly store it in Google Drive/One Drive, Access the data from anywhere and
+            restore the backup as per the requirement.
+          </li>
+          <li><strong>Import Purchase:</strong>
+            Allow to import purchase from any excel or csv format to save your time with 100% accuracy
+          </li>
+          <li><strong>Reporting:</strong>
+            Stay on top of your finances with powerful 1000's of sales, purchase, inventory & accounting reports
+          </li>
+          </li>
+          <li><strong>Cashier and Home Delivery:</strong>
+            Cashier management and home delivery feature gives you 100% control on your business
+          </li>
+          <li><strong> E-Way Bill:</strong>
+            Easily generate E-way Bill after registering on GST Portal and upload each and every process related to
+            E-Way Bills on Portal itself.
+          </li>
+        </ul>
+      </div>
+      <!-- Yaha click hone par product details aayenge -->
+    </div>
+
+    <!-- Right side form -->
+    <div class="form-container">
+      <h2>Enquiry Form</h2>
+      <form id="enquiry">
+        <label for="name">Name*</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email*</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="mobile">Mobile*</label>
+        <input type="tel" id="mobile" name="mobile" required>
+
+        <label for="product">Bussiness Type*</label>
+        <select id="product" name="product" required>
+          <option value="">-- Select Product --</option>
+          <option value="Pharmacy">Pharmacy</option>
+          <option value="pos">POS</option>
+          <option value="supermarket">SuperMarket</option>
+          <option value="jewellery">Jewellery</option>
+          <option value="Restaurant">Restaurant</option>
+          <option value="garment">Garment</option>
+          <option value="Retail Shop">Retail Shop</option>
+          <option value="Kirana/Glocery">Kirana/Glocery</option>
+          <option value="Departmental">Departmental</option>
+          <option value="Salon & Spa">Salon & Spa</option>
+          <option value="Book Store">Book Store</option>
+          <option value="footwear">Footwear</option>
+        </select>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="2"></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- footer section Start -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section company">
+        <h2>Swastik Associate</h2>
+        <p>Empowering Your Digital Future</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h3>Services</h3>
+        <ul>
+          <li><a href="#">GST Billing Software</a></li>
+          <li><a href="#">Pharmacy Software</a></li>
+          <li><a href="#">Pharma Software</a></li>
+          <li><a href="#">AccountsPro Software</a></li>
+          <li><a href="#">Export Billing Software</a></li>
+          <li><a href="#">Margerp Billing Software</a></li>
+          <li><a href="#">Quick Heal Antivirus</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>More Services</h3>
+        <ul>
+          <li><a href="#">Kirana Grocery Billing</a></li>
+          <li><a href="#">Retail Software</a></li>
+          <li><a href="#">Supermarket Software</a></li>
+          <li><a href="#">Ayurvedic & Homeopathic</a></li>
+          <li><a href="#">Custom ERP Solution</a></li>
+          <li><a href="#">Plywood Software</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Links</h3>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Products</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <!-- footer section End -->
+
+
+  <!-- window popup design -->
+  <div class="floating-icons">
+    <a href="https://wa.me/919356163445" target="_blank" class="icon whatsapp" title="Chat on WhatsApp">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+    </a>
+  </div>
+</body>
+
+</html>

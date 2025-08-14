@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(to right, #2b5876, #4e4376);
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+}
+
+.hero h1 span {
+  color: #ffdd57;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 25px;
+  background: #ffdd57;
+  color: black;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #ffc107;
+}
+
+/* Features */
+.features {
+  text-align: center;
+  padding: 50px 20px;
+  background: #f9f9f9;
+}
+
+.feature-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.feature {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 300px;
+}
+
+/* Testimonials */
+.testimonials {
+  padding: 50px 20px;
+  text-align: center;
+  background: #eef2f3;
+}
+
+.testimonial {
+  background: white;
+  padding: 20px;
+  margin: 15px auto;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Contact Form */
+.contact {
+  padding: 50px 20px;
+  text-align: center;
+  background: #f9f9f9;
+}
+
+.contact form {
+  max-width: 400px;
+  margin: auto;
+}
+
+.contact input, .contact button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.contact button {
+  background: #2b5876;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.contact button:hover {
+  background: #4e4376;
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>Grow Your Business With <span>Our Software</span></h1>
+      <p>Trusted by 5000+ businesses worldwide. Get your free trial today!</p>
+      <a href="#form" class="btn">Get Free Demo</a>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features">
+    <h2>Why Choose Us?</h2>
+    <div class="feature-grid">
+      <div class="feature">
+        <h3>🚀 Fast & Secure</h3>
+        <p>Lightning-fast performance and industry-grade security.</p>
+      </div>
+      <div class="feature">
+        <h3>💡 Easy to Use</h3>
+        <p>Intuitive interface that anyone can use without training.</p>
+      </div>
+      <div class="feature">
+        <h3>📞 24/7 Support</h3>
+        <p>Our team is always here to help you.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonial">
+      <p>"This software transformed my business. Highly recommended!"</p>
+      <span>- Rahul Sharma</span>
+    </div>
+    <div class="testimonial">
+      <p>"Easy to use and the support is amazing."</p>
+      <span>- Priya Gupta</span>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section id="form" class="contact">
+    <h2>Request a Free Demo</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <button type="submit" class="btn">Submit</button>
+    </form>
+  </section>
+
+</body>
+</html>

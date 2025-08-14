@@ -1,0 +1,3055 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revolve Fitness Gym</title>
+    <link rel="shortcut icon" href="/images/apple-touch-icon.png" type="">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+    --primary-color: #ff0336;
+    --secondary-color: #000;
+    --text-color: #555;
+    --white: #fff;
+  }
+.counters {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 50px 0;
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+}
+
+.counter-box {
+  text-align: center;
+}
+
+.counter {
+  font-size: 40px;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.counter + p {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+
+
+
+  /* General Styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+    text-decoration: none;
+    list-style: none;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    overflow-x: hidden;
+  }
+  
+  /* =======================Header Style==================================== */
+  .navbar a.active {
+    color: red; /* Active link color */
+    font-weight: bold;
+    border-bottom: 2px solid red;
+}
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--secondary-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+  .logoimg {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .logoimg:hover {
+    transform: scale(1.2);
+    transition: ease 0.3s;
+  }
+  
+  .navbar {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .navbar a {
+    color: var(--white);
+    font-weight: 500;
+    transition: 0.3s;
+  }
+  
+  .navbar a:hover {
+    color: var(--primary-color);
+  }
+  
+  .nav-btn {
+    padding: 0.8rem 2rem;
+    background: var(--primary-color);
+    color: var(--white);
+    border-radius: 5px;
+    transition: 0.3s;
+  }
+  
+  .nav-btn:hover {
+    background: var(--white);
+    color: var(--primary-color);
+    box-shadow: 0 0 18px var(--primary-color);
+  }
+  
+  .menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .off-canvas {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    top: 17vh;
+    position: absolute;
+    width: 100%;
+    height: max-content;
+    background-color: black;
+    opacity: 0.9;
+  
+    & a {
+      color: var(--white)
+    }
+  
+    & li {
+      margin: 1rem;
+    }
+  
+  }
+  
+  
+  
+  
+  /*===================Header Style End==================================== */
+  
+  /* =======================Header Media Query==================================== */
+  
+  @media screen and (min-width:300px) and (max-width:500px) {
+  
+    .logoimg {
+      width: 80px;
+      height: 80px;
+      margin-left: -10px;
+    }
+  
+    .logoimg:hover {
+      transform: scale(1.2);
+      transition: ease 0.3s;
+    }
+  
+    .navbar {
+      display: none;
+      gap: 2rem;
+    }
+  
+    .navbar a {
+      color: var(--white);
+      font-weight: 500;
+      transition: 0.3s;
+    }
+  
+    .navbar a:hover {
+      color: var(--primary-color);
+    }
+  
+    .nav-btn {
+      padding: 0.8rem 2rem;
+      background: var(--primary-color);
+      color: var(--white);
+      border-radius: 5px;
+      transition: 0.3s;
+      display: none;
+    }
+  
+    .nav-btn:hover {
+      background: var(--white);
+      color: var(--primary-color);
+      box-shadow: 0 0 18px var(--primary-color);
+    }
+  
+    .menu-toggle {
+      display: block;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--white);
+    }
+  
+    .off-canvas {
+      display: none;
+    }
+  }
+  
+  
+  @media screen and (min-width:500px) and (max-width:750px) {
+    .logoimg {
+      width: 80px;
+      height: 80px;
+      margin-left: -10px;
+    }
+  
+    .logoimg:hover {
+      transform: scale(1.2);
+      transition: ease 0.3s;
+    }
+  
+    .navbar {
+      display: none;
+      gap: 2rem;
+    }
+  
+    .navbar a {
+      color: var(--white);
+      font-weight: 500;
+      transition: 0.3s;
+    }
+  
+    .navbar a:hover {
+      color: var(--primary-color);
+    }
+  
+    .nav-btn {
+      padding: 0.8rem 2rem;
+      background: var(--primary-color);
+      color: var(--white);
+      border-radius: 5px;
+      transition: 0.3s;
+      display: none;
+    }
+  
+    .nav-btn:hover {
+      background: var(--white);
+      color: var(--primary-color);
+      box-shadow: 0 0 18px var(--primary-color);
+    }
+  
+    .menu-toggle {
+      display: block;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--white);
+    }
+  
+    .off-canvas {
+      display: none;
+    }
+  }
+  
+  @media screen and (min-width:750px) and (max-width:1200px) {
+    .logoimg {
+      width: 80px;
+      height: 80px;
+      margin-left: -10px;
+    }
+  
+    .logoimg:hover {
+      transform: scale(1.2);
+      transition: ease 0.3s;
+    }
+  
+    .navbar {
+      display: none;
+      gap: 2rem;
+    }
+  
+    .navbar a {
+      color: var(--white);
+      font-weight: 500;
+      transition: 0.3s;
+    }
+  
+    .navbar a:hover {
+      color: var(--primary-color);
+    }
+  
+    .nav-btn {
+      padding: 0.8rem 2rem;
+      background: var(--primary-color);
+      color: var(--white);
+      border-radius: 5px;
+      transition: 0.3s;
+      display: none;
+    }
+  
+    .nav-btn:hover {
+      background: var(--white);
+      color: var(--primary-color);
+      box-shadow: 0 0 18px var(--primary-color);
+    }
+  
+    .menu-toggle {
+      display: block;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--white);
+    }
+  
+    .off-canvas {
+      display: none;
+    }
+  }
+  
+  @media screen and (min-width:1200px) and (max-width:1900px) {
+    .logoimg {
+      width: 80px;
+      height: 80px;
+      margin-left: -10px;
+    }
+  
+    .logoimg:hover {
+      transform: scale(1.2);
+      transition: ease 0.3s;
+    }
+  
+    .navbar {
+      display: flex;
+      gap: 2rem;
+    }
+  
+    .navbar a {
+      color: var(--white);
+      font-weight: 500;
+      transition: 0.3s;
+    }
+  
+    .navbar a:hover {
+      color: var(--primary-color);
+    }
+  
+    .nav-btn {
+      padding: 0.8rem 2rem;
+      background: var(--primary-color);
+      color: var(--white);
+      border-radius: 5px;
+      transition: 0.3s;
+      display: block;
+    }
+  
+    .nav-btn:hover {
+      background: var(--white);
+      color: var(--primary-color);
+      box-shadow: 0 0 18px var(--primary-color);
+    }
+  
+    .menu-toggle {
+      display: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--white);
+    }
+  
+    .off-canvas {
+      display: none;
+    }
+  }
+  /* ===================Header Media Query End==================================== */
+
+
+
+ .slider {
+  position: relative;
+  width: 100%;
+  height: 89vh;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.slide:nth-child(1) {
+  background-image: url('/Images/bannerimg.jpg');
+}
+
+.slide:nth-child(2) {
+  background-image: url('/Images/bannerimg2.jpg');
+}
+
+.slide:nth-child(3) {
+  background-image: url('/Images/bannerimg3.jpg');
+}
+
+.overlay-1 {
+  height: 100%;
+  width: 100%;
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.overlay-1 h1 {
+  font-size: 75px;
+  padding: 30px;
+  color: red;
+  margin-top: 8px;
+}
+
+.overlay-1 h3 {
+  font-size: 65px;
+  padding: 30px;
+  color: white;
+  margin-top: -50px;
+}
+
+.overlay-1 p {
+  color: white;
+  font-size: 20px;
+  margin: 5px 100px;
+}
+
+.banner-content {
+  width: 85%;
+  height: auto;
+  font-size: 38px;
+}
+
+.btnji {
+  margin-top: -50px;
+  padding: 15px 40px;
+  background-color: #1ecc4f;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  border: none;
+}
+
+.btnji:hover {
+  background-color: red;
+}
+
+ /* Home Banner  style end*/
+
+  /* ===================Home Banner Media Query Start==================================== */
+  @media (min-width: 300px) and (max-width: 500px) {
+    .banner {
+      margin-top: 5rem;
+      height: 50vh;
+      background-size: cover; 
+      background-position: center;
+      margin-bottom: -5rem;
+    }
+  
+    .overlay-1 {
+      font-size: 18px; 
+      padding: 10px;
+    }
+  
+    .overlay-1 h1 {
+      font-size: 30px; 
+      padding: 15px;
+      margin-top: 5px;
+      text-align: center;
+    }
+  
+    .overlay-1 h3 {
+      font-size: 26px; 
+      padding: 15px;
+      margin-top: 2px;
+      text-align: center;
+    }
+  
+    .overlay-1 p {
+      font-size: 12px;
+      text-align: center;
+    }
+  
+    .banner-content {
+      width: 90%;
+      height: auto;
+      font-size: 20px;
+    }
+  
+    .banner-content p {
+      margin: 10px 20px;
+      font-size: 12px;
+    }
+  
+    .btnji {
+      margin-top: 10px;
+      padding: 1rem 2.4rem; 
+    font-size: 1.1rem;
+    }
+  }
+  @media (min-width: 500px) and (max-width: 750px) {
+    .banner {
+      margin-top: 5rem;
+      height: 50vh;
+      background-size: cover; 
+      background-position: center;
+      margin-bottom: -5rem;
+    }
+  
+    .overlay-1 {
+      font-size: 18px; 
+      padding: 10px;
+    }
+  
+    .overlay-1 h1 {
+      font-size: 55px; 
+      padding: 15px;
+      margin-top: 5px;
+      text-align: center;
+    }
+  
+    .overlay-1 h3 {
+      font-size: 35px; 
+      padding: 15px;
+      margin-top: 2px;
+      text-align: center;
+    }
+  
+    .overlay-1 p {
+      font-size: 17px;
+      text-align: center;
+    }
+  
+    .banner-content {
+      width: 90%;
+      height: auto;
+      font-size: 20px;
+    }
+  
+    .banner-content p {
+      margin: 10px 20px;
+      font-size: 15px;
+    }
+  
+    .btnji {
+      margin-top: 10px;
+      padding: 1rem 2.4rem; 
+    font-size: 1.1rem;
+    }
+  }
+  @media (min-width: 750px) and (max-width: 1200px) {
+    .banner {
+      margin-top: 5rem;
+      height: 50vh;
+      background-size: cover; 
+      background-position: center;
+      margin-bottom: -5rem;
+    }
+  
+    .overlay-1 {
+      font-size: 18px; 
+      padding: 10px;
+    }
+  
+    .overlay-1 h1 {
+      font-size: 55px; 
+      padding: 15px;
+      margin-top: 5px;
+      text-align: center;
+    }
+  
+    .overlay-1 h3 {
+      font-size: 35px; 
+      padding: 15px;
+      margin-top: 2px;
+      text-align: center;
+    }
+  
+    .overlay-1 p {
+      font-size: 17px;
+      text-align: center;
+    }
+  
+    .banner-content {
+      width: 90%;
+      height: auto;
+      font-size: 20px;
+    }
+  
+    .banner-content p {
+      margin: 10px 20px;
+      font-size: 15px;
+    }
+  
+    .btnji {
+      margin-top: 10px;
+      padding: 1rem 2.4rem; 
+    font-size: 1.1rem;
+    }
+  }
+  @media (min-width: 1200px) and (max-width: 1900px) {
+  .banner {
+    margin-top: 5rem;
+    height: 89vh;
+    width: 100%;
+    margin-bottom: -5rem;
+  }
+  .overlay-1 {
+  
+    height: 100%;
+    width: 100%;
+    font-size: 24px;
+    display: flex;
+    justify-items: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(0, 0, 0, 0.7);
+    justify-content: center;
+  
+  }
+  .overlay-1 h1 {
+    font-size: 75px;
+    padding: 30px;
+    color: red;
+    margin-top: 8px;
+  }
+  .overlay-1 h3 {
+    font-size: 65px;
+    padding: 30px;
+    color: var(--white);
+    margin-top: -50px;
+  }
+  
+  .overlay-1 p {
+    color: var(--white);
+    text-align: justify;
+    font-size: 20px;
+  
+  }
+  
+  .banner-content {
+    width: 85%;
+    height: 200px;
+    font-size: 38px;
+  }
+  
+  .banner-content p {
+    margin: 5px 100px 5px 100px;
+    text-align: center;
+  }
+.btnji {
+  margin-top: -50px;
+  padding: 15px 40px;
+  background-color: red; 
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  border: none;
+}
+
+}
+
+ /* ===================Home Banner Media Query End==================================== */
+
+
+/* Features Section start */
+.features {
+  padding: 4rem 9%;
+  text-align: center;
+  background-color: var(--secondary-color);
+  height: auto;
+}
+
+.features h3 {
+  font-size: 2rem;
+  margin-bottom: 0rem;
+  color: var(--primary-color);
+}
+
+.features div {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.features img {
+  height: 100px;
+  width: auto;
+  opacity: 0.7;
+  transition: 0.3s;
+  margin: 5px;
+}
+
+.features img:hover {
+  opacity: 1;
+}
+/* Features Section end */
+
+ /* ===================Features Media Query start==================================== */
+@media (min-width: 300px) and (max-width: 500px) {
+  .features {
+    margin-top: 80px;
+      padding: 2rem 5%;
+      height: auto;
+  }
+  .features h3 {
+      font-size: 1.5rem;
+  }
+  .features div {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+  .features img {
+      height: 60px;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 750px) {
+  .features {
+    margin-top: 80px;
+      padding: 3rem 7%;
+      height: auto;
+  }
+  .features h3 {
+      font-size: 1.7rem;
+  }
+  .features div {
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+  .features img {
+      height: 70px;
+  }
+}
+
+@media (min-width: 750px) and (max-width: 1200px) {
+  .features {
+    margin-top: 80px;
+      padding: 4rem 8%;
+      height: auto;
+  }
+  .features h3 {
+      font-size: 1.8rem;
+  }
+  .features div {
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+  .features img {
+      height: 100px;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1900px) {
+  .features {
+    margin-top: 80px;
+      padding: 4rem 9%;
+      height: auto;
+  }
+  .features h3 {
+      font-size: 2rem;
+  }
+  .features div {
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+  .features img {
+      height: 80px;
+  }
+}
+ /* ===================Featurs Media Query End==================================== */
+
+
+ 
+ .back {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  height: 300px;
+}
+.div_1 img, .div_3 img {
+  width: 500px;
+  margin-top: -100px;
+}
+.div_1 img {
+  margin-left: 9%;
+}
+.div_2 h1 {
+  font-size: 60px;
+  margin-top: -100px;
+  color: black;
+  text-align: center;
+  width: 100%;
+}
+@media (min-width: 300px) and (max-width: 500px) {
+  .back {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      height: auto;
+      text-align: center;
+  }
+  .div_1 img, .div_3 img {
+      width: 100%;
+      margin: 0;
+  }
+  .div_2 h1 {
+      font-size: 12px;
+      margin: 0;
+  }
+}
+@media (min-width: 500px) and (max-width: 750px) {
+  .back {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      height: auto;
+      text-align: center;
+  }
+  .div_1 img, .div_3 img {
+      width: 100%;
+      margin: 0;
+  }
+  .div_2 h1 {
+      font-size: 20px;
+      margin: 0;
+  }
+}
+@media (min-width: 750px) and (max-width: 1200px) {
+  .back {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      height: auto;
+      text-align: center;
+  }
+  .div_1 img, .div_3 img {
+      width: 100%;
+      margin: 0;
+  }
+  .div_2 h1 {
+      font-size: 30px;
+      margin: 0;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1900px) {
+  .back {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      height: auto;
+      text-align: center;
+  }
+  .div_1 img, .div_3 img {
+      width: 100%;
+      margin: 0;
+      margin-top: -90px;
+  }
+  .div_2 h1 {
+      font-size: 50px;
+      margin: 0;
+      margin-top: -90px;
+  }
+}
+
+
+
+/* testimonial style start */
+  .tes {
+    margin-top: 0px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    background: linear-gradient(-45deg, black, black);
+}
+
+.te {
+    background-color: black;
+    height: 70px;
+}
+
+.te h1 {
+    width: 100%;
+    margin-top: 80px;
+    color: red;
+    text-align: center;
+    font-size: 40px;
+    padding-top: 40px;
+
+}
+
+.te p {
+   
+    color: white;
+    text-align: center;
+    font-size: 17px;
+    padding-top: 40px;
+}
+
+.testimonial {
+    flex-basis: 25%;
+    text-align: center;
+    background-color: aliceblue;
+    border-radius: 10px;
+    padding: 20px;
+    cursor: pointer;
+
+}
+
+.testimonial:hover {
+    box-shadow: 0 0 0 3px red;
+}
+
+.testimonial img {
+    width: 200px;
+    height: 250px;
+    border-radius: 100px;
+    cursor: pointer;
+    margin: 20px 0;
+    transition: .5s;
+}
+
+.testimonial img:hover {
+    box-shadow: 0 0 0 5px red;
+}
+
+.testimonial h2 {
+    font-size: 25px;
+    color: red;
+}
+
+.testimonial p {
+    font-size: 10px;
+    line-height: 25px;
+    margin: 20px 0;
+    text-align: justify;
+
+}
+
+
+
+.testimonial-1 {
+    flex-basis: 24%;
+    text-align: center;
+    background-color: aliceblue;
+    border-radius: 10px;
+    padding: 20px;
+    cursor: pointer;
+    border: 4px solid red;
+
+
+}
+
+.testimonial-1 img {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    cursor: pointer;
+    margin: 20px 0;
+    transition: .5s;
+}
+
+.testimonial-1 img:hover {
+    box-shadow: 0 0 0 5px red;
+}
+
+.testimonial-1 h2 {
+    font-size: 28px;
+    color: red;
+}
+
+.testimonial-1 p {
+    font-size: 11px;
+    line-height: 25px;
+    margin: 20px 0;
+    text-align: justify;
+}
+
+.stars i {
+    color: #FFC300;
+}
+/* testimonial style end*/
+
+  /* ===================Testimonial Media Query Start==================================== */
+@media (min-width: 300px) and (max-width: 500px) {
+  .tes {
+    flex-direction: column; 
+    height: auto;
+    gap: 1.5rem; 
+    padding: 20px; 
+  }
+
+  .te h1 {
+    font-size: 30px; 
+    margin-top: 110px;
+    padding-top: 2px;
+  }
+
+  .te p {
+    font-size: 12px; 
+    padding-top: 2px;
+    text-align: center;
+  }
+
+  .testimonial, .testimonial-1 {
+    flex-basis: 100%; 
+    padding: 20px; 
+  }
+
+  .testimonial img, .testimonial-1 img {
+    width: 130px;
+    height: 130px;
+    margin: 10px 0;
+  }
+
+  .testimonial h2, .testimonial-1 h2 {
+    font-size: 22px; 
+  }
+
+  .testimonial p, .testimonial-1 p {
+    font-size: 16px; 
+    line-height: 22px;
+    margin: 10px 0;
+  }
+}
+@media (min-width: 500px) and (max-width: 750px) {
+  .tes {
+    flex-direction: column; 
+    height: auto; 
+    gap: 2rem; 
+    padding: 20px;
+  }
+
+  .te h1 {
+    font-size: 40px; 
+    margin-top: 90px;
+    padding-top: 20px;
+  }
+
+  .te p {
+    font-size: 15px; 
+    padding-top: 3px;
+  }
+
+  .testimonial, .testimonial-1 {
+    margin-top: 20px;
+    flex-basis: 50%;
+    padding: 20px; 
+    width: 50%;
+  }
+
+  .testimonial img, .testimonial-1 img {
+    width: 150px; 
+    height: 150px;
+    margin: 15px 0;
+  }
+
+  .testimonial h2, .testimonial-1 h2 {
+    font-size: 20px; 
+  }
+
+  .testimonial p, .testimonial-1 p {
+    font-size: 13px; 
+    line-height: 20px;
+    margin: 12px 0;
+  }
+}
+@media (min-width: 750px) and (max-width: 1200px) {
+  .tes {
+    display: flex;
+    height: auto; 
+    gap: 2rem; 
+    padding: 20px;
+  }
+
+  .te h1 {
+    font-size: 40px; 
+    margin-top: 90px;
+    padding-top: 20px;
+  }
+
+  .te p {
+    font-size: 15px; 
+    padding-top: 3px;
+  }
+
+  .testimonial, .testimonial-1 {
+    margin-top: 20px;
+    flex-basis: 40%;
+    padding: 20px; 
+    width: 50%;
+  }
+
+  .testimonial img, .testimonial-1 img {
+    width: 150px; 
+    height: 150px;
+    margin: 15px 0;
+  }
+
+  .testimonial h2, .testimonial-1 h2 {
+    font-size: 20px; 
+  }
+
+  .testimonial p, .testimonial-1 p {
+    font-size: 11px; 
+    line-height: 20px;
+    margin: 12px 0;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1900px) {
+  .te{
+    margin-top: 30px;
+  }
+ 
+  .tes {
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    gap: 2rem; 
+    padding: 40px;
+  }
+
+  .testimonial, .testimonial-1 {
+    flex-basis: 30%; 
+    padding: 20px;
+    margin-top: 30px;
+  }
+
+  .testimonial img, .testimonial-1 img {
+    width: 200px;
+    height: 200px;
+    margin: 15px 0;
+  }
+
+  .testimonial h2, .testimonial-1 h2 {
+    font-size: 26px; 
+  }
+
+  .testimonial p, .testimonial-1 p {
+    font-size: 15px;
+    line-height: 24px;
+    margin: 12px 0;
+  }
+}
+ /* ===================Testimonial Media Query end==================================== */
+
+
+
+/* our trainers style start */
+  .train h1 {
+    margin-top: 95px;
+    text-align: center;
+    font-size: 50px;
+    line-height: 2.1;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    color: red;
+}
+
+.train p {
+    text-align: center;
+    font-size: 20px;
+}
+
+.train {
+    width: 100%;
+}
+.main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+.card-11 img {
+    height: 70%;
+    margin: 20px;
+}
+.card-11 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: 55vh;
+    box-shadow: 3px 3px 10px black;
+    margin: 15px;
+
+}
+.intro {
+    width: 100%;
+    box-sizing: border-box;
+    background: black;  
+}
+.intro h1 {
+    margin: 10px;
+    font-size: 35px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    color: red;
+
+}
+.intro p {
+    margin: 10px;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    color: white;
+}
+.card-11:hover {
+    cursor: pointer;
+}
+/* our trainers style end */
+
+  /* ===================Our Trainers Media Query Start==================================== */
+
+@media (min-width: 300px) and (max-width: 500px) {
+  .train h1 {
+    font-size: 35px; 
+    line-height: 1.5;
+    margin-top: 120px;
+  }
+
+  .train p {
+    font-size: 16px; 
+    margin: 10px;
+  }
+
+  .main {
+    flex-direction: column; 
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .card-11 {
+    width: 60%; 
+    height: auto;
+    padding: 20px;
+    margin: 10px 0;
+  }
+
+  .card-11 img {
+    height: auto;
+    width: 100%;
+    margin: 6px 0;
+  }
+
+  .intro {
+    padding: 6px;
+  }
+
+  .intro h1 {
+    font-size: 18px; 
+  }
+
+  .intro p {
+    font-size: 7px; 
+  }
+}
+
+@media (min-width: 500px) and (max-width: 750px) {
+  .train h1 {
+    font-size: 35px; 
+    line-height: 1.5;
+    margin-top: 120px;
+  }
+
+  .train p {
+    font-size: 16px; 
+    margin: 10px;
+  }
+
+  .main {
+    flex-direction: column; 
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .card-11 {
+    width: 50%; 
+    height: auto;
+    padding: 20px;
+    margin: 10px 0;
+  }
+
+  .card-11 img {
+    height: auto;
+    width: 100%;
+    margin: 6px 0;
+  }
+
+  .intro {
+    padding: 6px;
+  }
+
+  .intro h1 {
+    font-size: 18px; 
+  }
+
+  .intro p {
+    font-size: 15px; 
+  }
+}
+
+@media (min-width: 750px) and (max-width: 1200px) {
+  .train h1 {
+    font-size: 45px; 
+    line-height: 2;
+    margin-top: 90px;
+  }
+
+  .train p {
+    font-size: 18px; 
+    margin: 15px;
+  }
+
+  .main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; 
+  }
+
+  .card-11 {
+    width: 35%; 
+    height: auto;
+    padding: 10px;
+    margin: 10px;
+  }
+
+  .card-11 img {
+    height: auto;
+    width: 90%;
+    margin: 10px 0;
+  }
+
+  .intro {
+    padding: 10px;
+  }
+
+  .intro h1 {
+    font-size: 30px; 
+  }
+
+  .intro p {
+    font-size: 17px; 
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1900px){
+  .train h1 {
+    margin-top: 95px;
+    text-align: center;
+    font-size: 70px;
+    line-height: 2.1;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    color: red;
+}
+
+.train p {
+    text-align: center;
+    font-size: 20px;
+}
+
+.train {
+    width: 100%;
+}
+.main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+.card-11 img {
+    height: 70%;
+    margin: 20px;
+}
+.card-11 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: 55vh;
+    box-shadow: 3px 3px 10px black;
+    margin: 15px;
+
+}
+.intro {
+    width: 100%;
+    box-sizing: border-box;
+    background: black;  
+}
+.intro h1 {
+    margin: 10px;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    color: red;
+
+}
+.intro p {
+    margin: 10px;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    color: white;
+}
+}
+ /* ===================Our Trainers Media Query End==================================== */
+
+
+
+
+
+/* plans style start */
+  .mem {
+    background-color: black;
+    width: 100%;
+    height: 180px;
+    margin-top: 110px;
+}
+
+.mem h1 {
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.mem p {
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    text-align: center;
+    line-height: 70px;
+}
+
+.mem-1 {
+    background-color: black;
+    width: 100%;
+    height: 180px;
+    margin-top: 40px;
+}
+
+.mem-1 h1 {
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.mem-1 p {
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    text-align: center;
+    line-height: 70px;
+}
+.rita {
+    background-color: black;
+    height: 1000px;
+
+}
+
+.pricing {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: black;
+    color: white;
+
+}
+
+.plan {
+    text-align: center;
+    background-color: #1f1f1f;
+    padding: 15px;
+    margin: 10px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    width: 22%;
+}
+
+.plan h2 {
+    color: red;
+}
+
+.plan h1 {
+    color: #ff4500;
+    font-size: 30px;
+}
+
+.plan ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.plan ul li {
+    margin: 5px 0;
+}
+
+.contact-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.contact-btn a {
+    color: white;
+    text-decoration: none;
+}
+
+.contact-btn:hover {
+    background-color: darkred;
+}
+/* plans style end */
+
+
+ /* ===================Plans  Media Query Start==================================== */
+
+@media (min-width: 300px) and (max-width: 500px) {
+  .mem {
+    height: auto;
+    margin-top: 95px;
+    padding: 20px 10px;
+    text-align: center;
+  }
+
+  .mem h1, .mem-1 h1 {
+    font-size: 25px;
+    padding-top: 5px;
+  }
+
+  .mem p, .mem-1 p {
+    font-size: 15px; 
+    line-height: 40px;
+  }
+
+  .rita {
+    height: auto; 
+    padding-bottom: 40px;
+  }
+
+  .pricing {
+    flex-direction: column; 
+    align-items: center;
+    padding: 10px;
+  }
+
+  .plan {
+    width: 80%; 
+    margin: 10px 0;
+    padding: 15px;
+   
+  }
+
+  .plan h2 {
+    font-size: 24px; 
+  }
+
+  .plan h1 {
+    font-size: 25px;
+  }
+
+  .plan ul li {
+    font-size: 14px;
+    margin: 3px 0;
+  }
+
+  .contact-btn {
+    width: 60%; 
+    padding: 12px;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 750px) {
+  .mem, .mem-1 {
+    height: auto;
+    margin-top: 80px;
+    padding: 25px 15px;
+    text-align: center;
+  }
+
+  .mem h1, .mem-1 h1 {
+    font-size: 40px; 
+    padding-top: 15px;
+  }
+
+  .mem p, .mem-1 p {
+    font-size: 18px; 
+    line-height: 40px;
+  }
+
+  .rita {
+    height: auto; 
+    padding-bottom: 30px;
+  }
+
+  .pricing {
+   flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+  }
+
+  .plan {
+    width: 70%; 
+    margin: 10px;
+    padding: 20px;
+  }
+
+  .plan h2 {
+    font-size: 28px;
+  }
+
+  .plan h1 {
+    font-size: 30px;
+  }
+
+  .plan ul li {
+    font-size: 16px; 
+    margin: 5px 0;
+  }
+
+  .contact-btn {
+    width: 50%; 
+    padding: 12px;
+  }
+}
+
+@media (min-width: 750px) and (max-width: 1200px) {
+  .mem, .mem-1 {
+    height: auto;
+    margin-top: 70px;
+    padding: 30px 20px;
+    text-align: center;
+  }
+
+  .mem h1, .mem-1 h1 {
+    font-size:35px; 
+    padding-top: 20px;
+  }
+
+  .mem p, .mem-1 p {
+    font-size: 20px; 
+    line-height: 50px;
+  }
+
+  .rita {
+    height: auto;
+    padding-bottom: 40px;
+  }
+
+  .pricing {
+    display: flex;
+    justify-content: space-between; 
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+
+  .plan {
+    width: 40%; 
+    margin: 10px 0;
+    padding: 20px;
+  }
+
+  .plan h2 {
+    font-size: 20px;
+  }
+
+  .plan h1 {
+    font-size: 25px;
+  }
+
+  .plan ul li {
+    font-size: 15px;
+    margin: 5px 0;
+  }
+
+  .contact-btn {
+    width: 50%;
+    padding: 12px;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1900px) {
+  .mem, .mem-1 {
+    height: auto;
+    margin-top: 80px;
+    padding: 40px 30px;
+    text-align: center;
+  }
+
+  .mem h1, .mem-1 h1 {
+    font-size: 40px; 
+    padding-top: 25px;
+  }
+
+  .mem p, .mem-1 p {
+    font-size: 18px;
+    line-height: 55px;
+  }
+
+  .rita {
+    height: auto;
+    padding-bottom: 50px;
+    margin-bottom: -80px;
+  }
+
+  .pricing {
+    display: flex;
+    justify-content: space-between; 
+    flex-wrap: wrap;
+    padding: 30px;
+  }
+
+  .plan {
+    width: 24%; 
+    margin: 15px 0;
+    padding: 25px;
+  }
+
+  .plan h2 {
+    font-size: 25px;
+  }
+
+  .plan h1 {
+    font-size: 30px;
+  }
+
+  .plan ul li {
+    font-size: 20px;
+    margin: 6px 0;
+  }
+
+  .contact-btn {
+    width: 50%;
+    padding: 14px;
+  }
+}
+ /* ===================Plans  Media Query End==================================== */
+
+/* come in today style start */
+
+ .come-join {
+  margin-top: 4rem;
+  height: 75vh;
+  width: 100%;
+  background-image: url(/images/comejoin3.PNG);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  margin-bottom: -5rem;
+}
+.overlay1 {
+
+  height: 100%;
+  width: 100%;
+  font-size: 2px;
+  display: flex;
+  justify-items: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(0, 0, 0, 0.7);
+  justify-content: center;
+
+}
+.overlay1 h1 {
+  font-size: 20px;
+  padding: 30px;
+  color: var(--primary-color);
+  margin-top: 8px;
+}
+
+.overlay1 p {
+  color: var(--white);
+  text-align: justify;
+  font-size: 22px;
+
+}
+
+.span2 {
+  width: 85%;
+  height: 280px;
+  font-size: 38px;
+}
+
+.span2 p {
+  margin: 5px 100px 5px 100px;
+  text-align: center;
+}
+
+
+.money-btn1 {
+  align-items: center;
+  justify-content: center;
+  display: inline-block;
+  padding: 1rem 2.8rem;
+  background: var(--white);
+  border-radius: 1rem;
+  box-shadow: none;
+  font-size: 1.3rem;
+  color: var(--primary-color);
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  transition: 0.5s ease;
+  transition: all 0.4s ease;
+}
+
+.money-btn1:hover {
+  background: var(--primary-color);
+  color: var(--white);
+  box-shadow: 0 0 18px var(--primary-color);
+  transition: 0.5s;
+  z-index: 2;
+
+}
+/* come in today style end */
+
+ /* ===================Come in Today  Media Query Start==================================== */
+@media (min-width: 300px) and (max-width: 500px) {
+  .come-join {
+    margin-top: 2rem;
+    height: 50vh;
+    background-size: contain; 
+    background-position: center;
+    margin-bottom: -5rem;
+  }
+
+  .overlay1 {
+    font-size: 18px; 
+    padding: 10px; 
+  }
+
+  .overlay1 h1 {
+    font-size: 30px; 
+    padding: 15px;
+    margin-top: 5px;
+    text-align: center;
+  }
+
+  .overlay1 p {
+    font-size: 16px; 
+    text-align: center; 
+  }
+
+  .span2 {
+    width: 90%;
+    height: auto; 
+    font-size: 24px; 
+  }
+
+  .span2 p {
+    margin: 10px 20px; 
+    font-size: 11px; 
+  }
+
+  .money-btn1 {
+    margin-top: 10px;
+    padding: 1rem 2.4rem; 
+    font-size: 1.2rem;
+    border-radius: 1rem;
+  }
+}
+@media (min-width: 500px) and (max-width: 750px) {
+  .come-join {
+    margin-top: 3rem; 
+    height: 60vh; 
+    background-size: cover; 
+    background-position: center;
+    margin-bottom: -5rem; 
+  }
+
+  .overlay1 {
+    font-size: 30px; 
+    padding: 15px;
+  }
+
+  .overlay1 h1 {
+    font-size: 55px;
+    padding: 20px;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .overlay1 p {
+    font-size: 18px; 
+    text-align: center;
+  }
+
+  .span2 {
+    width: 90%;
+    height: auto; 
+    font-size: 28px; 
+  }
+
+  .span2 p {
+    margin: 10px 50px; 
+    font-size: 15px; 
+    text-align: center;
+  }
+
+  .money-btn1 {
+    margin-top: 10px;
+    padding: 1rem 2.4rem; 
+    font-size: 1.2rem;
+    border-radius: 1rem;
+  }
+}
+
+@media (min-width: 750px) and (max-width: 1200px) {
+  .come-join {
+    margin-top: 4rem;
+    height: 70vh; 
+    background-size: cover; 
+    background-position: center;
+    margin-bottom: -5rem; 
+  }
+
+  .overlay1 {
+    font-size: 20px; 
+    padding: 20px;
+  }
+
+  .overlay1 h1 {
+    font-size: 45px; 
+    padding: 25px;
+    margin-top: 12px;
+    text-align: center;
+  }
+
+  .overlay1 p {
+    font-size: 20px; 
+    text-align: center;
+  }
+
+  .span2 {
+    width: 85%;
+    height: auto; 
+    font-size: 30px; 
+  }
+
+  .span2 p {
+    margin: 10px 80px; 
+    font-size: 22px; 
+  }
+
+  .money-btn1 {
+    margin-top: 20px;
+    padding: 1.2rem 2.8rem; 
+    font-size: 1.3rem;
+    border-radius: 1.2rem;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1900px) {
+  .come-join {
+    margin-top: 5rem; 
+    height: 80vh; 
+    background-size: cover;
+    background-position: center;
+    margin-bottom: -5rem; 
+  }
+
+  .overlay1 {
+    font-size: 24px; 
+    padding: 25px;
+  }
+
+  .overlay1 h1 {
+    font-size: 70px; 
+    padding: 30px;
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  .overlay1 p {
+    font-size: 24px; 
+    text-align: center;
+  }
+
+  .span2 {
+    width: 80%;
+    height: auto; 
+    font-size: 35px;
+  }
+
+  .span2 p {
+    margin: 10px 90px; 
+    font-size: 24px;
+  }
+
+  .money-btn1 {
+    margin-top: 20px;
+    padding: 1.5rem 3rem; 
+    font-size: 1.3rem;
+    border-radius: 1.5rem;
+  }
+}
+
+
+
+
+  
+ /* Footer Style */
+.footer-disti {
+    background-color: black;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 50px;
+    margin-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .footer-disti .footer-left,
+  .footer-disti .footer-center,
+  .footer-disti .footer-right {
+    width: 30%;
+  }
+  
+  .footer-disti .footer-left {
+    margin-left: 40px;
+  }
+  
+  .footer-disti .footer-link {
+    color: aliceblue;
+    margin: 20px 0 12px;
+  }
+  
+  .footer-disti .footer-link a {
+    color: aliceblue;
+    text-decoration: none;
+    display: inline-block;
+    line-height: 1.8;
+  }
+  
+  .footer-disti .footer-companyname {
+    color: #8f9296;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+  }
+  
+  .footer-disti .footer-center i {
+    background-color: #33383b;
+    color: #fff;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+  }
+  
+  .footer-disti .footer-center p {
+    display: inline-block;
+    color: #fff;
+    vertical-align: middle;
+    margin: 0;
+  }
+  
+  .footer-disti .footer-center p span {
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 2;
+  }
+  
+  .footer-disti .footer-company-about {
+    line-height: 25px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: normal;
+    margin-top: 8px;
+  }
+  
+  .footer-disti .footer-icon a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color: #33383b;
+    border-radius: 2px;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 3px;
+    margin-bottom: 5px;
+    margin-top: 25px;
+  }
+  
+  .footer-disti .footer-icon a:hover {
+    background-color: #3f71ea;
+  }
+  
+  .footer-link a:hover {
+    color: red;
+  }
+  
+  .footer-companyname a{
+    color: white;
+  }
+  .footer-companyname a:hover{
+    color:blue;
+  }
+  /* Footer Style end */
+  
+  /* ===================Footer Media Query Start==================================== */
+
+@media screen and (min-width:300px) and (max-width:500px) {
+    .footer-disti {
+      padding: 5px;
+      width: 100%;
+    }
+  
+    .footer-disti .footer-link a {
+      line-height: 1.8;
+      font-size: 11px;
+     
+    }
+    .footer-disti .footer-companyname {
+      font-size: 12px;
+      margin-left: -25px;
+     
+    }
+  
+    .footer-disti .footer-left,
+    .footer-disti .footer-center,
+    .footer-disti .footer-right {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .footer-disti .footer-center i {
+      font-size: 10px;
+      width: 20px;
+      height: 20px;
+      line-height: 20px;
+      margin-top: 15px;
+     
+      
+    }
+    .footer-disti .footer-center .fa-envelope{
+      margin-left: -20px;
+    }
+    .footer-disti .footer-center .fa-phone-square{
+      margin-left: -83px;
+    }
+    .footer-disti .footer-center .fa-map-marker{
+      margin-left: 40px;
+    }
+  
+  
+    .footer-disti .footer-center p span {
+      font-size: 10px;
+      text-align: left;
+      margin-top: 11px;
+      
+    }
+  
+    .footer-disti .footer-center p {
+      font-size: 10px;
+      text-align: left;
+    }
+  
+    .footer-disti .footer-icon a {
+      width: 30px;
+      height: 30px;
+      font-size: 20px;
+      line-height: 30px;
+      
+    
+    }
+  
+    .footer-disti .footer-company-about {
+      font-size: 20px;
+     text-align: center;
+     margin-top: 20px;
+     
+    }
+   
+   
+  }
+  
+  @media screen and (min-width:500px) and (max-width:750px) {
+    .footer-disti {
+      padding: 5px;
+      width: 100%;
+    }
+  
+    .footer-disti .footer-link a {
+      line-height: 1.8;
+      font-size: 15px;
+     
+    }
+    .footer-disti .footer-companyname {
+      font-size: 12px;
+      margin-left: -25px;
+     
+    }
+  
+    .footer-disti .footer-left,
+    .footer-disti .footer-center,
+    .footer-disti .footer-right {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .footer-disti .footer-center i {
+      font-size: 12px;
+      width: 20px;
+      height: 20px;
+      line-height: 20px;
+      margin-top: 15px;
+     
+      
+    }
+    .footer-disti .footer-center .fa-envelope{
+      margin-left: -20px;
+    }
+    .footer-disti .footer-center .fa-phone-square{
+      margin-left: -95px;
+    }
+    .footer-disti .footer-center .fa-map-marker{
+      margin-left: 40px;
+    }
+  
+  
+    .footer-disti .footer-center p span {
+      font-size: 12px;
+      text-align: left;
+      margin-top: 11px;
+      
+    }
+  
+    .footer-disti .footer-center p {
+      font-size: 11px;
+      text-align: left;
+    }
+  
+    .footer-disti .footer-icon a {
+      width: 30px;
+      height: 30px;
+      font-size: 20px;
+      line-height: 30px;
+      
+    
+    }
+  
+    .footer-disti .footer-company-about {
+      font-size: 20px;
+     text-align: center;
+     margin-top: 20px;
+     
+    }
+   
+   
+  }
+  
+  @media (min-width: 750px) and (max-width: 1200px) {
+    .footer-disti {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 40px;
+      text-align: left;
+    }
+  
+    .footer-disti .footer-left,
+    .footer-disti .footer-center,
+    .footer-disti .footer-right {
+      width: 30%;
+    }
+  
+    .footer-disti .footer-left {
+      margin-left: 0;
+    }
+  
+    .footer-disti .footer-link {
+      margin: 15px 0;
+    }
+    .footer-disti .footer-link a {
+     font-size: 11px;
+    }
+    .footer-disti .footer-center {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .footer-disti .footer-center .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 10px 0;
+    }
+  
+    .footer-disti .footer-center i {
+      font-size: 15px;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: #33383b;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+  
+    .footer-disti .footer-center .fa-envelope{
+      margin-left: -40px;
+    }
+    .footer-disti .footer-center .fa-phone-square{
+      margin-left: -40px;
+    }
+    .footer-disti .footer-center .fa-map-marker{
+      margin-left: -40px;
+    }
+  
+    .footer-disti .footer-center {
+      font-size: 15px;
+      
+      white-space: nowrap;
+    }
+    .footer-disti .footer-center span{
+      font-size: 11px;
+     
+      margin-top: -50px;
+    }
+  
+    .footer-disti .footer-companyname {
+      font-size: 10px;
+    }
+  
+    .footer-disti .footer-icon {
+      margin-top: 20px;
+      display: flex;
+      gap: 10px;
+    }
+  
+    .footer-disti .footer-icon a {
+      width: 30px;
+      height: 30px;
+      font-size: 18px;
+      line-height: 30px;
+      text-align: center;
+      margin: 0;
+      background-color: #33383b;
+      border-radius: 5px;
+    }
+  }
+  
+  
+  @media (min-width: 1200px) and (max-width: 1900px) {
+    .footer-disti {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 40px;
+      text-align: left;
+    }
+  
+    .footer-disti .footer-left,
+    .footer-disti .footer-center,
+    .footer-disti .footer-right {
+      width: 30%;
+    }
+  
+    .footer-disti .footer-left {
+      margin-left: 0;
+    }
+  
+    .footer-disti .footer-link {
+      margin: 15px 0;
+    }
+    .footer-disti .footer-link a {
+     font-size: 17px;
+    }
+    .footer-disti .footer-center {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .footer-disti .footer-center .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 10px 0;
+    }
+  
+    .footer-disti .footer-center i {
+      font-size: 25px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #33383b;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+  
+    .footer-disti .footer-center .fa-envelope{
+      margin-left: -49px;
+    }
+    .footer-disti .footer-center .fa-phone-square{
+      margin-left: -49px;
+    }
+    .footer-disti .footer-center .fa-map-marker{
+      margin-left: -49px;
+    }
+  
+    .footer-disti .footer-center  {
+      font-size: 17px;
+      
+      white-space: nowrap; 
+    }
+    .footer-disti .footer-center p span{
+      font-size: 19px;
+     
+      margin-top: -65px;
+    }
+  
+    .footer-disti .footer-companyname {
+      font-size: 15px;
+    }
+  
+    .footer-disti .footer-icon {
+      margin-top: 20px;
+      display: flex;
+      gap: 10px;
+    }
+  
+    .footer-disti .footer-icon a {
+      width: 40px;
+      height: 40px;
+      font-size: 27px;
+      line-height: 40px;
+      text-align: center;
+      margin: 0;
+    }
+    .footer-disti .footer-company-about{
+      font-size: 30px;
+    }
+  }
+  /* ===================Footer Media Query End==================================== */
+  
+/* why choose us text content  start*/
+  .pr {
+    margin: 8px 125px 8px 125px;
+}
+
+.pr p {
+    text-align: center;
+    font-size: 39px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 10px;
+    text-align: justify;
+    
+}
+
+.cd {
+    width: 120px;
+    height: 40px;
+    background-color: #ec4141;
+    border: none;
+    margin-top: 30px;
+    font-size: 18px;
+    border-radius: 2px;
+    margin-top: 25px;
+    margin-right: 30px;
+    color: black;
+    transition: .2s ease;
+
+}
+
+.cd a {
+    text-decoration: none;
+    transition: .2s ease;
+    color: white;
+}
+
+.cd:hover {
+    background-color: black;
+    color: white;
+}
+
+/* why choose us text content end */
+
+@media screen and (min-width: 300px) and (max-width: 500px) {
+  .pr {
+      margin: 8px 20px; 
+  }
+
+  .pr p {
+      font-size: 20px; 
+      text-align: justify;
+      font-family: 'Times New Roman', Times, serif;
+  }
+
+  .cd {
+      width: 100px; 
+      height: 35px;
+      font-size: 16px;
+      margin-right: 10px;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 750px) {
+  .pr {
+      margin: 8px 50px; /* Thoda margin adjust kiya */
+  }
+
+  .pr p {
+      font-size: 20px; /* Font size medium screens ke liye adjust kiya */
+      text-align: justify;
+      font-family: 'Times New Roman', Times, serif;
+  }
+
+  .cd {
+      width: 110px; /* Button size thoda adjust kiya */
+      height: 38px;
+      font-size: 17px;
+      margin-right: 20px;
+  }
+}
+@media screen and (min-width: 750px) and (max-width: 1200px) {
+  .pr {
+      margin: 8px 80px; /* Medium-Large screens ke liye margin adjust */
+  }
+
+  .pr p {
+      font-size: 20px; /* Font size bada rakha taaki readability acchi rahe */
+      text-align: justify;
+      justify-content: center;
+      font-family: 'Times New Roman', Times, serif;
+  }
+
+  .cd {
+      width: 115px; /* Button size thoda adjust kiya */
+      height: 40px;
+      font-size: 18px;
+      margin-right: 25px;
+  }
+}
+    </style>
+</head>
+
+<body>
+
+    <!-- ====================Header Section=========================================== -->
+    <header class="header">
+
+       <a href="index.html"> <img src="/images/logo.png" class="logoimg"></a>
+        <ul class="navbar">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="program.html">Programs</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contactUs.html">Contact</a></li>
+        </ul>
+
+        <div class="top-btn">
+            <a href="contactUs.html" class="nav-btn">Join Us</a>
+        </div>
+
+        <div class="menu-toggle">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+    </header>
+    <div class="off-canvas">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="program.html">Programs</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contactUs.html">Contact</a></li>
+    </div>
+
+    <script>
+
+        let toggle = document.querySelector(".menu-toggle");
+        let offCanvas = document.querySelector('.off-canvas');
+
+        toggle.addEventListener("click", () => {
+            offCanvas.style.display = offCanvas.style.display === 'none' ? 'flex' : 'none';
+        })
+
+    </script>
+
+    <!-- ============Header Section End============================= -->
+
+
+     <!-- ============Home Banner Section Start============================= -->
+    <div class="banner">
+        <div class="overlay-1">
+            <h1>Wake Up</h1>
+            <h3>It's Time To Improve</h3>
+            <span class="banner-content">
+                <p>Our gym is equipped with the industry’s finest strength<br>
+                    and cardio equipment you need for your fitness. </p>
+            </span>
+            <a href="contactUs.html" class=btnji>Get Started</a>
+        </div>
+    </div>
+    <!-- ============Home Banner Section End============================= -->
+
+ <!-- ============Features Section Start============================= -->
+ <div class="features ">
+    <h3>Featured In</h3>
+    <div class="feature12">
+        <img src="/images/a-1.png">
+        <img src="/images/b-1.png">
+        <img src="/images/d-1.png">
+        <img src="/images/c-1.png">
+    </div>
+</div>
+ <!-- ============Features Section End============================= -->
+
+ <div class="back">
+    <div class="div_1">
+        <img src="/images/yaro1.png">
+    </div>
+    <div class="div_2">
+        <h1>Why Choose Us</h1>
+    </div>
+    <div class="div_3">
+        <img src="/images/yaro2.png">
+    </div>
+</div>
+<div class="div_4">
+<center><img  src="/images/3img.jpg" style="border-radius: 50%; height: 60%; width: 20%; margin-top: -300px;">
+</center>
+</div>
+<div class="pr">
+    <p>We are a spacious gym of 4500 sq ft of area with the best life fitness equipment’s and also with 24*7 AC
+        coverage. We have the best trainers who are all certified in their own streams. We have one of the best
+        group classes sessions and yoga trainer.
+        Our fitness sessions include group sessions and individualistic, personal training. We also have yoga,
+        stepper workouts and HIIT besides Zumba and resistant training.
+    </p>
+    <center> <button class="cd"><a href="about.html">See More</a></button></center>
+</div>
+
+<!-- ============Testimonial Section Start============================= -->
+    <div class="te">
+        <h1>Testimonial</h1>
+        <p>If you follow the right workout routine, you will get exactly
+            what you need.</p>
+    </div>
+    <div class="tes">
+        <div class="testimonial">
+            <img src="/images/testi1.jpg">
+            <h2>Courtney Henry</h2>
+            <p>Such a clean and welcoming environment. Equipment is always clean and they are so nice. I will Never go
+                to another Gym.sprint GYm is the best gym l've ever been to ! They are always posting cool and fun
+                things   on Facebook.</p>
+            <div class="stars">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa-solid fa-star-half"></i>
+            </div>
+        </div>
+
+        <div class="testimonial-1">
+            <img src="/images/testi3.jpg">
+            <h2>Cameron Williamson</h2>
+            <p>
+                The abundant equipment selection Gym is kept clean,and in good working order. Sprint Gym Staff is
+                cheerful and pleasant.
+                I like the freedom to visit Sprint Gym I want when out of town. Been a member for 11 years. </p>
+            <div class="stars">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa-solid fa-star-half"></i>
+            </div>
+        </div>
+
+        <div class="testimonial"  id="testu">
+            <img src="/images/testi2.jpg">
+            <h2>Jane Cooper</h2>
+            <p>Such a clean and welcoming environment. Equipment is always clean and they are so nice. I will Never go
+                to another Gym.sprint GYm is the best gym l've ever been to ! They are always posting cool and fun
+                things on Facebook.</p>
+            <div class="stars">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa-solid fa-star-half"></i>
+            </div>
+        </div>
+    </div>
+    <!-- ============Testimonial Section Start============================= -->
+
+
+     <!-- ============Our Trainer Section Start============================= -->
+    <div class="train">
+        <h1>Our Trainers</h1>
+        <p>Whatever your fitness goal, our personal trainers can offer
+            one-to-one sessions and classes.</p>
+    </div>
+
+    <div class="main">
+        <div class="card-11">
+            <img src="/images/om yadav.png">
+            <div class="intro">
+                <h1>Om Yadav</h1>
+                <p>Coach(Trainer)</p>
+            </div>
+        </div>
+
+        <div class="card-11">
+            <img src="/images/kumar.png">
+            <div class="intro">
+                <h1>Kumar</h1>
+                <p> Fitness Coach</p>
+            </div>
+        </div>
+
+        <div class="card-11">
+            <img src="/images/mithun.png">
+            <div class="intro">
+                <h1>Mithun</h1>
+                <p>Fitness Coach</p>
+            </div>
+        </div>
+
+        <div class="card-11">
+            <img src="/images/cameron.jpg">
+            <div class="intro">
+                <h1>Cameron William</h1>
+                <p>Fitness Coach</p>
+            </div>
+        </div>
+
+    </div>
+     <!-- ============Our Trainer Section End============================= -->
+
+
+
+     <!-- ============Plans Section Start============================= -->
+    <div class="mem">
+        <h1>
+            Membership Plans</h1>
+        <p>Choose the membership plan that is
+            right for your fitness.</p>
+    </div>
+    <div class="rita">
+        <section class="pricing">
+            <div class="plan">
+                <h2>Montly Plan</h2><br>
+                <p>Whether you want to build muscle or completely transform your body.</p><br>
+                <h1>₹ 1999</h1><br>
+                <p>Includes:</p><br>
+                <ul>
+                    <li>24/7 Gym Access</li>
+                    <li>Consultation</li>
+                </ul>
+                <button class="contact-btn"><a href="contactUs.html">Contact Us</a></button>
+            </div>
+            <div class="plan">
+                <h2>Quatarly Plan</h2><br>
+                <p>Whether you want to build muscle or completely transform your body.</p><br>
+                <h1>₹ 4999</h1><br>
+                <p>Includes:</p><br>
+                <ul>
+                    <li>24/7 Gym Access</li>
+                    <li>Consultation</li>
+                </ul>
+                <button class="contact-btn"><a href="contactUs.html">Contact Us</a></button>
+            </div>
+            <div class="plan">
+                <h2>Half Yearly Plan</h2><br>
+                <p>Whether you want to build muscle or completely transform your body.</p><br>
+                <h1>₹6999</h1><br>
+                <p>Includes:</p><br>
+                <ul>
+                    <li>24/7 Gym Access</li>
+                    <li>Consultation</li>
+                </ul>
+                <button class="contact-btn"><a href="contactUs.html">Contact Us</a></button>
+            </div>
+            <div class="plan">
+                <h2>Yearly Plan</h2><br>
+                <p>Whether you want to build muscle or completely transform your body.</p><br>
+                <h1>₹9999</h1><br>
+                <p>Includes:</p><br>
+                <ul>
+                    <li>24/7 Gym Access</li>
+                    <li>Consultation</li>
+                </ul>
+                <button class="contact-btn"><a href="contactUs.html">Contact Us</a></button>
+            </div>
+        </section>
+        <div class="mem-1">
+            <h1>Couple
+                Membership Plans</h1>
+            <p>Choose the
+                membership plan that is right for your fitness.</p>
+        </div>
+        <section class="pricing">
+            <div class="plan">
+                <h2>Montly Plan</h2><br>
+                <p>Whether you want to build muscle or completely transform your body.</p><br>
+                <h1>₹3499</h1><br>
+                <p>Includes:</p><br>
+                <ul>
+                    <li>24/7 Gym Access</li>
+                    <li>Consultation</li>
+                </ul>
+                <button class="contact-btn"><a href="contactUs.html">Contact Us</a></button>
+            </div>
+            <div class="plan">
+                <h2>Quatarly Plan</h2><br>
+                <p>Whether you want to build muscle or completely transform your body.</p><br>
+                <h1>₹8999</h1><br>
+                <p>Includes:</p><br>               
+                 <ul>
+                    <li>24/7 Gym Access</li>
+                    <li>Consultation</li>
+                </ul>
+                <button class="contact-btn"><a href="contactUs.html">Contact Us</a></button>
+            </div>
+            <div class="plan">
+                <h2>Half Yearly Plan</h2><br>
+                <p>Whether you want to build muscle or completely transform your body.</p><br>
+                <h1>₹12999</h1><br>
+                <p>Includes:</p><br>
+                <ul>
+                    <li>24/7 Gym Access</li>
+                    <li>Consultation</li>
+                </ul>
+                <button class="contact-btn"><a href="contactUs.html">Contact Us</a></button>
+            </div>
+            <div class="plan">
+                <h2>Yearly Plan</h2><br>
+                <p>Whether you want to build muscle or completely transform your body.</p><br>
+                <h1>₹17999</h1><br>
+                <p>Includes:</p><br>
+                <ul>
+                    <li>24/7 Gym Access</li>
+                    <li>Consultation</li>
+                </ul>
+                <button class="contact-btn"><a href="contactUs.html">Contact Us</a></button>
+            </div>
+    </section>
+</div>
+ <!-- ============Plans Section End============================= -->
+
+
+  <!-- ============come in today Section start============================= -->
+ <div class="come-join">
+    <div class="overlay1">
+        <h1> Come in today!</h1>
+        <span class="span2">
+            <p>We believe in providing the best workout for the best results.<br>Feel good, feel good fast. </p>
+        </span>
+        <a href="contactUs.html" class=money-btn1>Contact Us</a>
+    </div>
+</div>
+ <!-- ============come in today Section end============================= -->
+
+
+   
+<!-- ============Footer Section Start=========================================== -->
+<footer class="footer-disti">
+    <div class="footer-left">
+        <a href="index.html"> <img src="/images/logo.png" height="100px" width="100px"></a>
+        <p class="footer-link">
+            <a href="index.html">Home</a>
+            |
+            <a href="about.html">About Us</a>
+            |
+            <a href="program.html">Programs</a>
+            |
+            <a href="gallery.html">Gallery</a>
+            |
+            <a href="contactUs.html">Contact</a>
+        </p>
+
+        <p class="footer-companyname">Copyright @ 2023 <strong>Revolve Fitness Gym </strong></p>
+        <p class="footer-companyname"> Designed By <strong><a href="https://pskitservices.com/">PSK Technologies
+                    Pvt. Ltd.</a> </strong>
+        </p>
+    </div>
+    <div class="footer-center"  class="contact-item">
+        <div>
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+            <p><span>Email:</span>
+                revolvefitnessgym@gmail.com</p>
+        </div>
+        <div>
+            <i class="fa fa-phone-square" aria-hidden="true"></i>
+            <p><span>Phone:</span>+91 80871 18714</p>
+        </div>
+        <div>
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+            <p><span>Address:</span>Chichbhavan Near Bhavans School ,Nagpur</p>
+        </div>
+    </div>
+
+    <div class="footer-right">
+        <h2 class="footer-company-about">
+            Revolve Fitness Gym
+        </h2>
+
+        <div class="footer-icon">
+            <a href="https://www.facebook.com/people/Revolve-Fitness-Gym/100090769917976/"><span
+                    class="fab fa-facebook-f"></span></a>
+            <a href="https://x.com/KrunalThak71116"><span class="fab fa-twitter"></span></a>
+            <a href="https://www.instagram.com/revolve_fitness_/"><span class="fab fa-instagram"></span></a>
+            <a href="https://www.linkedin.com/in/revolve-fitness-gym-11400126a/"><span
+                    class="fab fa-linkedin"></span></a>
+        </div>
+    </div>
+</footer>
+ <!-- ============Footer Section End=========================================== -->
+
+
+  <script>
+  let slides = document.querySelectorAll('.slide');
+  let currentSlide = 0;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.remove('active');
+      if (i === index) slide.classList.add('active');
+    });
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  // Auto Slide
+  let slideInterval = setInterval(nextSlide, 5000); // Change slide every 5 sec
+</script>
+
+
+<div class="slider">
+  <div class="slide active">
+    <div class="overlay-1">
+      <h1>Accounting Software</h1>
+      <h3>For Businesses</h3>
+      <span class="banner-content">
+        <p>Smart, scalable billing & accounting software for micro, small and medium enterprises. Available on Desktop, Cloud & Mobile.</p>
+      </span>
+      <a href="#" class="btnji">Free Trial →</a>
+    </div>
+  </div>
+
+  <div class="slide">
+    <div class="overlay-1">
+      <h1>Inventory Management</h1>
+      <h3>For Growing Business</h3>
+      <span class="banner-content">
+        <p>Track inventory in real time, manage orders, and improve operational efficiency with our ERP inventory module.</p>
+      </span>
+      <a href="#" class="btnji">Learn More →</a>
+    </div>
+  </div>
+
+  <div class="slide">
+    <div class="overlay-1">
+      <h1>GST Billing Software</h1>
+      <h3>Easy & Compliant</h3>
+      <span class="banner-content">
+        <p>Create GST invoices, manage returns, and stay compliant with our easy-to-use GST billing features.</p>
+      </span>
+      <a href="#" class="btnji">Try Now →</a>
+    </div>
+  </div>
+</div>
+
+
+<div class="counters">
+  <div class="counter-box">
+    <h3 id="exp" class="counter" data-target="15">0</h3>
+    <p>Years of Experience</p>
+  </div>
+  <div class="counter-box">
+    <h3 id="users" class="counter" data-target="2500">0</h3>
+    <p>Happy Users</p>
+  </div>
+  <div class="counter-box">
+    <h3 id="clients" class="counter" data-target="150">0</h3>
+    <p>Clients</p>
+  </div>
+  <div class="counter-box">
+    <h3 id="satisfaction" class="counter" data-target="99">0</h3>
+    <p>Customer Satisfaction (%)</p>
+  </div>
+</div>
+
+
+</body>
+
+</html>

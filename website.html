@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swastik Associate</title>
+  <!--Stylesheet -->
+  <link href="/style.css" rel="stylesheet">
+
+  <!-- Icon Font Stylesheet -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <!-- Font Awesome icons link -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <!-- Logo -->
+    <div class="logo">
+      <img src="/Images/Sawastik Logo.png" alt="Logo" />
+    </div>
+
+    <!-- Menu Toggle (Hamburger) -->
+    <div class="menu-toggle" id="menuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navMenu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+
+      <div class="dropdown">
+        <span class="dropdown-btn">Product ▾</span>
+        <div class="dropdown-content">
+          <a href="retail.html">Retail</a>
+          <a href="wholesales.html">Wholesales</a>
+          <a href="mobileApplication.html">Mobile Application</a>
+          <a href="crm.html">CRM</a>
+          <a href="website.html" class="active">Website</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <span class="dropdown-btn">Help Desk ▾</span>
+        <div class="dropdown-content">
+          <a href="https://swastikngp.salestack.in/customerportal">Complaint</a>
+          <a href="#">Pay Online</a>
+        </div>
+      </div>
+
+      <a href="contact.html" class="contact-btn">Contact</a>
+      <button id="loginBtn">Login</button>
+    </nav>
+  </header>
+    <!-- Hero Section -->
+    <section class="heroji">
+        <div class="hero-contentji">
+            <h1><span>Professional</span> Website Development Services</h1>
+            <p>Custom, responsive, and SEO-friendly websites tailored to your needs.</p>
+            <div class="hero-buttonsji">
+                <button class="cta-btnji" id="quoteBtn">Get a Free Quote</button>
+                <button class="secondary-btn" id="contactBtnji">Contact Us</button>
+            </div>
+        </div>
+        <div class="hero-imageji">
+            <img src="Images/website-develop.png" alt="Website Development">
+        </div>
+    </section>
+<!-- About section -->
+ <section class="about-sectionweb">
+  <div class="about-containerweb">
+    <div class="about-contentweb">
+      <h2>About Our Website Development Service</h2>
+      <p>
+        We specialize in creating visually stunning, responsive, and user-focused websites that combine creativity with functionality. 
+        Our mission is to design online experiences that not only look beautiful but also provide smooth navigation, fast performance, and an engaging user journey.
+      </p>
+      <p>
+        From the initial concept to the final launch, we focus on every design detail to ensure your website stands out in today’s competitive digital space. 
+        Whether you need a simple corporate site, a dynamic portfolio, or a feature-rich e-commerce store, our approach ensures your website remains visually appealing, easy to use, and fully adaptable to all screen sizes.
+      </p>
+
+      <ul class="service-highlightsweb">
+        <li>Custom Website Design – Tailored layouts and styles that align perfectly with your brand image.</li>
+        <li>Responsive Design – Seamless adaptability across mobile, tablet, and desktop devices.</li>
+        <li>Pixel-Perfect Detailing – Every section and component aligned with precision.</li>
+        <li>High Performance – Optimized for speed to keep visitors engaged without delays.</li>
+        <li>Cross-Browser Compatibility – Smooth performance on Chrome, Edge, Firefox, Safari, and more.</li>
+        <li>Interactive Experience – Animations, transitions, and hover effects for an engaging interface.</li>
+        <li>User-Centric Approach – Designs created with your audience’s needs in mind.</li>
+      </ul>
+
+      <p class="goal-web">
+        Our goal is to ensure your website is not just an online presence, but a powerful representation of your brand — a platform that attracts, engages, and converts visitors into customers.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- types of website section -->
+<section class="types-section" aria-labelledby="types-heading">
+  <div class="types-wrap">
+    <h2 id="types-heading">Types of Websites We Develop</h2>
+    <p class="types-sub">Clear options to choose from — pick the site type that fits your business.</p>
+
+    <!-- Filter Pills -->
+    <div class="filters" role="tablist" aria-label="Website types filter">
+      <button class="pill active" data-filter="all" role="tab" aria-selected="true">All</button>
+      <button class="pill" data-filter="business" role="tab">Business</button>
+      <button class="pill" data-filter="ecommerce" role="tab">E-Commerce</button>
+      <button class="pill" data-filter="portfolio" role="tab">Portfolio</button>
+      <button class="pill" data-filter="blog" role="tab">Blog & News</button>
+      <button class="pill" data-filter="custom" role="tab">Custom Apps</button>
+      <button class="pill" data-filter="landing" role="tab">Landing Pages</button>
+    </div>
+
+    <!-- Cards Grid -->
+    <div class="cards-grid" id="cardsGrid">
+      <!-- Card template: data-type must match filter names -->
+      <article class="type-card" data-type="business" tabindex="0">
+        <div class="card-icon">🏢</div>
+        <h3>Business / Corporate</h3>
+        <p class="short">Professional sites for companies — about, services, contact, careers.</p>
+      </article>
+
+      <article class="type-card" data-type="ecommerce" tabindex="0">
+        <div class="card-icon">🛒</div>
+        <h3>E-Commerce</h3>
+        <p class="short">Stores with product catalog, cart, checkout & payment integrations.</p>
+      </article>
+
+      <article class="type-card" data-type="portfolio" tabindex="0">
+        <div class="card-icon">🎨</div>
+        <h3>Portfolio</h3>
+        <p class="short">Showcase your work with gallery pages, case studies and contact CTA.</p>
+      </article>
+
+      <article class="type-card" data-type="blog" tabindex="0">
+        <div class="card-icon">📰</div>
+        <h3>Blog & News</h3>
+        <p class="short">Content-first layouts, category archives, author pages, SEO-ready.</p>
+      </article>
+
+      <article class="type-card" data-type="custom" tabindex="0">
+        <div class="card-icon">⚙️</div>
+        <h3>Custom Web Apps</h3>
+        <p class="short">Tailor-made applications — dashboards, portals, SaaS, integrations.</p>
+      </article>
+
+      <article class="type-card" data-type="landing" tabindex="0">
+        <div class="card-icon">🚀</div>
+        <h3>Landing Pages</h3>
+        <p class="short">Conversion-focused pages for campaigns, product launches & leads.</p>
+      </article>
+    </div>
+
+  </div>
+</section>
+
+<!-- Modal (hidden by default) -->
+<div id="typeModal" class="type-modal" aria-hidden="true" role="dialog" aria-modal="true">
+  <div class="modal-backdrop" id="modalBackdrop"></div>
+  <div class="modal-panel" role="document">
+    <button class="modal-close" id="modalClose" aria-label="Close">×</button>
+    <div class="modal-content">
+      <div class="modal-icon" id="modalIcon">🖥️</div>
+      <h3 id="modalTitle">Title</h3>
+      <p id="modalDesc">Full description goes here.</p>
+      <div class="modal-actions">
+        <button id="modalQuote" class="btn-cta">Get a Free Quote</button>
+        <button id="modalDemo" class="btn-ghost">Request Demo</button>
+      </div>
+    </div>
+  </div>
+</div>
+ 
+<!-- why choose us for website -->
+<section class="features-section">
+  <div class="features-title">
+    <h2>Why Choose Us</h2>
+    <p>We provide exceptional web development services with unmatched quality and performance.</p>
+  </div>
+
+  <div class="features-container">
+    <div class="feature-card">
+      <i class="fas fa-mobile-alt"></i>
+      <h3>Responsive Design</h3>
+      <p>Works perfectly on mobile, tablet, and desktop devices.</p>
+    </div>
+
+    <div class="feature-card">
+      <i class="fas fa-search"></i>
+      <h3>SEO-Friendly</h3>
+      <p>Optimized for search engines to improve your ranking.</p>
+    </div>
+
+    <div class="feature-card">
+      <i class="fas fa-tachometer-alt"></i>
+      <h3>Fast Loading Speed</h3>
+      <p>Better performance for an enhanced user experience.</p>
+    </div>
+
+    <div class="feature-card">
+      <i class="fas fa-paint-brush"></i>
+      <h3>Custom Design</h3>
+      <p>Tailored layouts that match your brand identity.</p>
+    </div>
+
+    <div class="feature-card">
+      <i class="fas fa-lock"></i>
+      <h3>Secure & Reliable</h3>
+      <p>SSL-enabled and hacker-proof architecture.</p>
+    </div>
+
+    <div class="feature-card">
+      <i class="fas fa-cogs"></i>
+      <h3>Easy to Manage</h3>
+      <p>Admin panel for quick content updates.</p>
+    </div>
+  </div>
+</section>
+
+<!-- trust build customer design start -->
+<section class="dev-process">
+  <h2>Our Development Process</h2>
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <span class="step-icon">1</span>
+        <h3>Requirement Gathering</h3>
+        <p>Understanding your business & goals in depth.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item right">
+      <div class="timeline-content">
+        <span class="step-icon">2</span>
+        <h3>Planning & Wireframing</h3>
+        <p>Creating a blueprint to visualize website structure & features.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <span class="step-icon">3</span>
+        <h3>Design & Development</h3>
+        <p>Building a custom, responsive, and stunning website.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item right">
+      <div class="timeline-content">
+        <span class="step-icon">4</span>
+        <h3>Testing</h3>
+        <p>Ensuring quality, speed, and security before launch.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <span class="step-icon">5</span>
+        <h3>Launch</h3>
+        <p>Making your website live and accessible to the public.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item right">
+      <div class="timeline-content">
+        <span class="step-icon">6</span>
+        <h3>Support & Maintenance</h3>
+        <p>Providing ongoing help, updates, and enhancements.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!--  call to action -->
+  <section class="cta-pro">
+  <div class="floating-shape shape1"></div>
+  <div class="floating-shape shape2"></div>
+  <div class="floating-shape shape3"></div>
+
+  <div class="cta-content">
+    <h2>🚀 Ready to Take Your Business Online?</h2>
+    <p>Let’s build something amazing together — from concept to launch!</p>
+    <div class="cta-buttons">
+      <a href="website.html" class="btn-primary">Get Started Now</a>
+      <a href="contact.html" class="btn-secondary">Contact Us</a>
+    </div>
+  </div>
+</section>
+<!-- footer section Start -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section company">
+        <h2>Swastik Associate</h2>
+        <p>Empowering Your Digital Future</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h3>Services</h3>
+        <ul>
+          <li><a href="#">GST Billing Software</a></li>
+          <li><a href="#">Pharmacy Software</a></li>
+          <li><a href="#">Pharma Software</a></li>
+          <li><a href="#">AccountsPro Software</a></li>
+          <li><a href="#">Export Billing Software</a></li>
+          <li><a href="#">Margerp Billing Software</a></li>
+          <li><a href="#">Quick Heal Antivirus</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>More Services</h3>
+        <ul>
+          <li><a href="#">Kirana Grocery Billing</a></li>
+          <li><a href="#">Retail Software</a></li>
+          <li><a href="#">Supermarket Software</a></li>
+          <li><a href="#">Ayurvedic & Homeopathic</a></li>
+          <li><a href="#">Custom ERP Solution</a></li>
+          <li><a href="#">Plywood Software</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Links</h3>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Products</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <!-- footer section End -->
+   <!-- window popup design -->
+  <div class="floating-icons">
+    <a href="https://wa.me/919356163445" target="_blank" class="icon whatsapp" title="Chat on WhatsApp">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+    </a>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Swastik Associate</title>
+  <!--Stylesheet -->
+  <link href="/style.css" rel="stylesheet">
+
+  <!-- Icon Font Stylesheet -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+  <script src="script.js" defer></script>
+
+</head>
+
+<body>
+  <header>
+    <!-- Logo -->
+    <div class="logo">
+      <img src="/Images/Sawastik Logo.png" alt="Logo" />
+    </div>
+
+    <!-- Menu Toggle (Hamburger) -->
+    <div class="menu-toggle" id="menuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navMenu">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+
+      <div class="dropdown">
+        <span class="dropdown-btn">Product ▾</span>
+        <div class="dropdown-content">
+          <a href="retail.html">Retail</a>
+          <a href="wholesales.html">Wholesales</a>
+          <a href="mobileApplication.html">Mobile Application</a>
+          <a href="crm.html">CRM</a>
+          <a href="website.html">Website</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <span class="dropdown-btn">Help Desk ▾</span>
+        <div class="dropdown-content">
+          <a href="https://swastikngp.salestack.in/customerportal">Complaint</a>
+          <a href="#">Pay Online</a>
+        </div>
+      </div>
+
+      <a href="contact.html" class="contact-btn">Contact</a>
+      <button id="loginBtn">Login</button>
+    </nav>
+  </header>
+  <div class="topcontainer">
+    <div class="scroll-text">
+      Swastik Associate, Most Trusted ERP Solution Provider
+    </div>
+  </div>
+
+
+  <div class="slider">
+    <!-- <--1st position slide -->
+    <div class="slide active">
+      <div class="overlay-erp-full">
+        <h1 style="display: flex; align-items: center; gap: 10px;">
+          <img src="/Images/margbanner-logo.jpg" alt="Marg Logo" style="height: 58px; width: 100px;">
+          <span class="blue-text">Marg</span> ERP 9+
+        </h1>
+
+        <h2>India's No. 1 Inventory & Accounting Software</h2>
+        <p class="subtext">GST Billing to Filing</p>
+        <p class="desc">1 Million+ Satisfied users / 850+ Sales & Support Centers</p>
+
+        <div class="certification-logos">
+          <img src="/Images/CMMI.jpg" alt="CMMI" />
+          <img src="/Images/iso1-icon.png" alt="ISO" />
+          <img src="/Images/gdpr1-icon.png" alt="GDPR" />
+        </div>
+
+        <div class="services">
+          <div class="service-item">
+            <img src="/Images/retailgreen-icon.png" alt="Retail" />
+            <p>Retail</p>
+          </div>
+          <div class="service-item">
+            <img src="/Images/distiribution-icon.png" alt="Distribution" />
+            <p>Distribution</p>
+          </div>
+          <div class="service-item">
+            <img src="/Images/manufacturing-icon.png" alt="Manufacturing" />
+            <p>Manufacturing</p>
+          </div>
+        </div>
+
+        <div class="erp-buttons">
+          <a href="contact.html" class="btn-erp green">REQUEST FOR FREE DEMO</a>
+        </div>
+      </div>
+    </div>
+    <!-- 2nd position slide - Web Development -->
+    <div class="slide">
+      <div class="overlay-webdev">
+        <!-- Left Content -->
+        <div class="webdev-left">
+          <h1 class="webdev-title">WEB <span>DEVELOPMENT</span></h1>
+          <p class="webdev-desc">
+            We create stunning, scalable and smart web solutions for your business.
+            Let’s bring your ideas to life with creativity and technology.
+          </p>
+          <a href="contact.html" class="btn-webdev">READ MORE</a>
+        </div>
+
+        <!-- Right Illustration -->
+        <div class="webdev-right">
+          <img src="/Images/webdevelop-banner.png" alt="Web Development Illustration">
+        </div>
+      </div>
+    </div>
+
+    <!-- 3nd position slide-->
+    <div class="slide">
+      <div class="overlay-1">
+        <h1>Refer & Earn</h1>
+        <h3>Share the value. Earn the reward.</h3>
+        <span class="banner-content">
+          <p>Refer and unlock exciting bonuses for both you and your friends.</p>
+        </span>
+        <a href="contact.html" class="btnji">Enquiry More →</a>
+      </div>
+    </div>
+    <!--  4rd position slide -->
+    <div class="slide">
+      <div class="overlay-1">
+        <h1>Accounting Software</h1>
+        <h3>For Businesses</h3>
+        <span class="banner-content">
+          <p>Smart, scalable billing & accounting software for micro, small and medium enterprises. Available on
+            Desktop, Cloud & Mobile.</p>
+        </span>
+        <a href="contact.html" class="btnji">Free Trial →</a>
+      </div>
+    </div>
+    <!-- Navigation buttons -->
+    <button id="prevBtn" class="nav-btn">‹</button>
+    <button id="nextBtn" class="nav-btn">›</button>
+  </div>
+
+  <!-- ============Home Banner Section End============================= -->
+
+  <div class="products">
+    <h1 class="pricing-title">
+      Find Better Solutions Build <span class="highlight-text">Better Products</span>
+    </h1>
+  </div>
+
+  <div class="card-container">
+    <div class="card">
+      <img src="/Images/invoice.jpg" alt="">
+      <div class="card-content">
+        <h1>Billing & Invoicing</h1>
+        <p>Fast and flexible billing (Retail/Wholesale)
+          GST-compliant invoices
+          E-invoice & E-way bill generation
+          Barcode integration</p>
+        <a href="" class="card-btn">read</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="/Images/inventory.jpg" alt="">
+      <div class="card-content">
+        <h1> Inventory Management</h1>
+        <p>Batch-wise & expiry management
+          Reorder level alerts
+          Stock valuation reports
+          Dead stock & near expiry alerts</p>
+        <a href="" class="card-btn">read</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="/Images/management-accounting.jpg" alt="">
+      <div class="card-content">
+        <h1>Accounting Management</h1>
+        <p>Full accounting module (Receipts, Payments, Journal, Contra, etc.)
+          GST returns filing (GSTR 1, 2A, 3B, 9)
+          Balance sheet, P&L, Trial Balance reports</p>
+        <a href="" class="card-btn"> read</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="/Images/scm.jpg" alt="">
+      <div class="card-content">
+        <h1>Customer & Supplier Management</h1>
+        <p>Ledger reports
+          Credit limit setup
+          Outstanding & aging reports
+          SMS/WhatsApp reminders for payments</p>
+        <a href="" class="card-btn"> read</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="/Images/REPORT-IMG.jpg" alt="">
+      <div class="card-content">
+        <h1>Reports & MIS</h1>
+        <p>5000+ reports available
+          Sales & purchase analysis
+          GST audit reports
+          Real-time dashboard</p>
+        <a href="" class="card-btn"> read</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="/Images/cloudmulti1.png" alt="">
+      <div class="card-content">
+        <h1>Multi-location & Cloud Access</h1>
+        <p>Centralized data control
+          Mobile app for owner & salesman
+          Access from any device (with internet)</p>
+        <a href="" class="card-btn"> read</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="/Images/pharma.jpg" alt="">
+      <div class="card-content">
+        <h1>Pharma-Specific Features</h1>
+        <p>Salt-wise search
+          Drug license management
+          Auto updates for medicine rates (with DavaIndia, CIMS, etc.)</p>
+        <a href="" class="card-btn"> read</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="/Images/usersecure.jpg" alt="">
+      <div class="card-content">
+        <h1>User Rights & Security</h1>
+        <p>Role-based access control
+          Data backup & recovery
+          Audit trail for all transactions</p>
+        <a href="" class="card-btn"> read</a>
+      </div>
+    </div>
+  </div>
+  <!-- pricing design part start -->
+  <section class="pricing-section" id="pricing-id">
+    <h1 class="pricing-title">
+      Simple & Affordable <span class="highlight-text">MargERP Pricing</span>
+    </h1>
+
+    <!-- Country Badge -->
+    <div class="country-badge">
+      <h3 class="country-title">India & South Asia (₹)</h3>
+      <p class="country-subtitle">India, Pakistan, Bangladesh, Sri Lanka, Nepal, Bhutan, Maldives</p>
+    </div>
+
+    <!-- Pricing Cards -->
+    <div class="pricing-cards">
+      <!-- Marg ERP Nano -->
+      <div class="pricing-card">
+        <h2 class="plan-title">Marg ERP Nano</h2>
+        <p class="plan-price">₹5400</p>
+        <p class="plan-gst">+18% GST Extra</p>
+        <ul class="plan-features">
+          <li class="feature-item">450 Bills/Month (Challans + Estimates)</li>
+          <li class="feature-item">Monthly Billing Amount ₹1,50,000</li>
+          <li class="feature-item">₹5 per extra bill or upgrade to Basic/Silver</li>
+        </ul>
+      </div>
+
+      <!-- Basic Edition -->
+      <div class="pricing-card">
+        <h2 class="plan-title">Basic Edition</h2>
+        <p class="plan-price">₹9999</p>
+        <p class="plan-gst">+18% GST Extra</p>
+        <ul class="plan-features">
+          <li class="feature-item">1 User Full Rights</li>
+          <li class="feature-item">₹3000 per extra user</li>
+          <li class="feature-item">Maximum 2 Users</li>
+        </ul>
+      </div>
+
+      <!-- Silver Edition -->
+      <div class="pricing-card popular-plan">
+        <div class="popular-tag">Most Popular</div>
+        <h2 class="plan-title">Silver Edition</h2>
+        <p class="plan-price">₹13500</p>
+        <p class="plan-gst">+18% GST Extra</p>
+        <ul class="plan-features">
+          <li class="feature-item">1 User Full Rights</li>
+          <li class="feature-item">1 User View Only</li>
+          <li class="feature-item">₹3000 per extra user</li>
+        </ul>
+      </div>
+
+      <!-- Gold Edition -->
+      <div class="pricing-card">
+        <h2 class="plan-title">Gold Edition</h2>
+        <p class="plan-price">₹25200</p>
+        <p class="plan-gst">+18% GST Extra</p>
+        <ul class="plan-features">
+          <li class="feature-item">Unlimited Users</li>
+        </ul>
+      </div>
+    </div>
+    <div class="section">
+      <div class="text1">
+        <li>Implementation / Customisation / Data Migration / Advanced Features / Training charges are extra if
+          applicable.</li>
+        <li>Licence came with Single Company, If there is Morethan One Company Additional Company Charges are
+          applicable.</li>
+        <li>All MARG ERP ARC prices are including Licence renewal and Local Partner Service/Support cost.</li>
+        <li>No need to pay Additional costs for regular support/services after paying ARC.</li>
+        <li>GST 18% Extra</li>
+        <li class="text2">All prices are subject to change without Perior notice and are not guaranteed, except that
+          prices for an order that
+          have been accepted by Swastik Associate</li>
+      </div>
+    </div>
+    <!-- Book Demo Button -->
+    <a href="contact.html"><button class="book-demo-btn">Book Demo</button></a>
+  </section>
+  <!-- pricing design part End -->
+
+  <!-- retail software start -->
+
+  <h1 class="retail">
+    Retail<span class="highlight-text1"> Softwares</span>
+  </h1>
+  <div class="circle-container">
+    <!-- Example Circle Item with Dropdown -->
+    <div class="circle-item">
+      <div class="circle">
+        <img src="Images/pharblack.png" alt="Pharma & Healthcare">
+      </div>
+      <p>Pharmacy</p>
+
+      <!-- Dropdown -->
+      <div class="dropdown-panel">
+        <div class="dropdown-left">
+          <h3>Pharmacy Shop with ERP Software</h3>
+          <li>Send Automatic Prescription Reminders on WhatsApp</li>
+          <li>Uninterrupted GST Billing & Return Filing</li>
+          <a href="retail.html" class="card-btn"> Read More</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Repeat for other circles -->
+    <div class="circle-item">
+      <div class="circle">
+        <img src="Images/POSIMG.png" alt="FMCG">
+      </div>
+      <p>POS</p>
+      <div class="dropdown-panel">
+        <div class="dropdown-left">
+          <h3>Best POS Software</h3>
+          <li>Cashflow Transparency with Cash Drawer Management</li>
+          <li>Design & Print Barcode Print to add Product Details</li>
+          <li>Customize Invoices & get QR on the Bill</li>
+          <a href="retail.html" class="card-btn"> Read More</a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="circle-item">
+      <div class="circle">
+        <img src="Images/supermarket1.png" alt="Automobile">
+      </div>
+      <p>SuperMarket</p>
+      <div class="dropdown-panel">
+        <div class="dropdown-left">
+          <h3>Kirana Shop with Marg ERP</h3>
+          <li>Stay connected & reward your customers for their loyalty</li>
+          <li>Uninterrupted GST Billing & Return Filing</li>
+          <a href="retail.html" class="card-btn"> Read More</a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="circle-item">
+      <div class="circle">
+        <img src="Images/jewellary.png" alt="Warehouse">
+      </div>
+      <p>Jewellery</p>
+      <div class="dropdown-panel">
+        <div class="dropdown-left">
+          <h3>Best Jewellery Software</h3>
+          <li>Extensive Service Network & Fully Customisable Package</li>
+          <li>Complete Customer Management to increase your revenues</li>
+          <a href="retail.html" class="card-btn"> Read More</a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="circle-item">
+      <div class="circle">
+        <img src="Images/resto1.png" alt="Mandi (AADHAT)">
+      </div>
+      <p>Restaurant</p>
+      <div class="dropdown-panel">
+        <div class="dropdown-left">
+          <h3>Best Restaurant Billing Software</h3>
+          <li>Smart Billing & Orders with restaurant management software.</li>
+          <li>Manage KOTs, recipes & kitchen display effortlessly.</li>
+          <li>Fast, smooth & hassle-free transactions.</li>
+
+          <a href="retail.html" class="card-btn"> Read More</a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="circle-item">
+      <div class="circle">
+        <img src="Images/garment.png" alt="Electronic Appliances">
+      </div>
+      <p>Garment </p>
+      <div class="dropdown-panel">
+        <div class="dropdown-left">
+          <h3>Best Garment Software</h3>
+          <li>Effortlessly streamline your entire garment store operations with Garment Billing Software.
+            leading to increased sales and more customers.</li>
+
+          <a href="retail.html" class="card-btn"> Read More</a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="circle-item">
+      <div class="circle">
+        <img src="Images/retailshop.png" alt="Jewellery">
+      </div>
+      <p>Retail Shop</p>
+      <div class="dropdown-panel">
+        <div class="dropdown-left">
+          <h3>Retail POS Software & Billing Solution for Shops</h3>
+          <li>Manage all your retail operations in a centralized system with Marg Retail Software.</li>
+
+          <a href="retail.html" class="card-btn"> Read More</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="circle-item">
+      <div class="circle">
+        <img src="Images/grocery.png" alt="Textile & Apparel">
+      </div>
+      <p>Kirana/Glocery</p>
+      <div class="dropdown-panel">
+        <div class="dropdown-left">
+          <h3>Grocery Software</h3>
+          <li>Automate your Grocery Store to acquire New Customers & more Sales</li>
+          <li>Fast GST Billing & Return Filing</li>
+          <li>Powerful Inventory Management</li>
+
+          <a href="retail.html" class="card-btn"> Read More</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="circle-item">
+      <div class="circle">
+        <img src="Images/departmental.png" alt="Import/Export Trading">
+      </div>
+      <p>Departmental</p>
+      <div class="dropdown-panel">
+        <div class="dropdown-left">
+          <h3>We make Departmental GST Billing & filing easy</h3>
+          <li>Erp is a GST-ready inventory & accounting software that helps you generate invoices easily,
+            track inventory accurately.</li>
+
+          <a href="retail.html" class="card-btn"> Read More</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="circle-item">
+      <div class="circle">
+        <img src="Images/salonspa.png" alt="Import/Export Trading">
+      </div>
+      <p>Salon & Spa</p>
+      <div class="dropdown-panel">
+        <div class="dropdown-left">
+          <h3>Salon & Spa Software For Your Beauty Business</h3>
+          <li>Presenting a GST-ready Salon management software that helps you efficiently manage your Spa & Salon
+            business. appointments.</li>
+
+          <a href="retail.html" class="card-btn"> Read More</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="circle-item">
+      <div class="circle">
+        <img src="Images/bookstore.png" alt="Import/Export Trading">
+      </div>
+      <p>Book Store</p>
+      <div class="dropdown-panel">
+        <div class="dropdown-left">
+          <h3>Bookstore business</h3>
+          <li>Easy Implementation</li>
+          <li>Customizable</li>
+          <li>Collaborative</li>
+          <li>Business Booster</li>
+
+          <a href="retail.html" class="card-btn"> Read More</a>
+        </div>
+      </div>
+    </div>
+    <div class="circle-item">
+      <div class="circle">
+        <img src="Images/footwear.png" alt="Import/Export Trading">
+      </div>
+      <p>Footwear</p>
+      <div class="dropdown-panel">
+        <div class="dropdown-left">
+          <h3>Footwear business</h3>
+          <li>Easy Implementation</li>
+          <li>Customizable</li>
+          <li>Collaborative</li>
+          <li>Business Booster</li>
+
+          <a href="retail.html" class="card-btn"> Read More</a>
+        </div>
+      </div>
+    </div>
+    <!-- Add same structure for all 12 items -->
+  </div>
+  <!-- retail software end -->
+
+  <!-- wholesales design start -->
+  <div class="whole">
+    <h1 class="retail">
+      Distribution<span class="highlight-text1"> Softwares</span>
+    </h1>
+  </div>
+
+
+  <div class="circle-container1">
+    <div class="circle-item">
+      <div class="circle">
+        <img src="Images/health.png" alt="Pharma & Healthcare">
+      </div>
+      <p>Pharma & Healthcare</p>
+      <div class="dropdown-panel">
+        <div class="dropdown-left">
+          <h3>Pharma Distribution Software</h3>
+          <li>Receive Online Orders Directly in Your ERP from multiple retailers—no calls, no WhatsApp, no manual
+            entries.</li>
+
+
+
+          <a href="retail.html" class="card-btn"> Read More</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="circle-item">
+      <div class="circle">
+        <img src="Images/FMCG1.png" alt="FMCG">
+      </div>
+      <p>FMCG</p>
+      <div class="dropdown-panel">
+        <div class="dropdown-left">
+          <h3>FMCG Distribution Software</h3>
+          <li>Manage your FMCG and packaged food distribution with FMCG distribution software solutions for wholesale
+            distribution.
+          </li>
+          <a href="retail.html" class="card-btn"> Read More</a>
+        </div>
+      </div>
+    </div>
+    <div class="circle-item">
+      <div class="circle">
+        <img src="Images/footwear.png" alt="FMCG">
+      </div>
+      <p>Footwear</p>
+      <div class="dropdown-panel">
+        <div class="dropdown-left">
+          <h3>Footwear business</h3>
+          <li>Easy Implementation</li>
+          <li>Customizable</li>
+          <li>Collaborative</li>
+          <li>Business Booster</li>
+
+          <a href="retail.html" class="card-btn"> Read More</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="circle-item">
+      <div class="circle">
+        <img src="Images/automobile1.png" alt="Automobile">
+      </div>
+      <p>Automobile</p>
+      <div class="dropdown-panel">
+        <div class="dropdown-left">
+          <h3>Automobile Accounting business </h3>
+          <li>ERP is a GST-ready inventory & accounting software that lets generate invoices easily, manage your
+            debtors, finance, reconcile bank transactions, t and file GST returns effortlessly.
+          </li>
+
+          <a href="retail.html" class="card-btn"> Read More</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="circle-item">
+      <div class="circle">
+        <img src="Images/mobile.png" alt="Warehouse">
+      </div>
+      <p>Mobile</p>
+      <div class="dropdown-panel">
+        <div class="dropdown-left">
+          <h3>Mobile business</h3>
+          <li>Easy Implementation</li>
+          <li>Customizable</li>
+          <li>Collaborative</li>
+          <li>Business Booster</li>
+
+          <a href="retail.html" class="card-btn"> Read More</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="circle-item">
+      <div class="circle">
+        <img src="Images/electronic.png" alt="Electronic Appliances">
+      </div>
+      <p>Electronics Appliances</p>
+      <div class="dropdown-panel">
+        <div class="dropdown-left">
+          <h3>Electronic Appliancess distribution</h3>
+          <li>Erp is a GST-ready inventory & accounting software that helps you generate invoices easily, manage your
+            accounts, reconcile bank transactions, track inventory accurately.</li>
+          <a href="retail.html" class="card-btn"> Read More</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="circle-item">
+      <div class="circle">
+        <img src="Images/textile.png" alt="">
+      </div>
+      <p>Textile & Apparel </p>
+      <div class="dropdown-panel">
+        <div class="dropdown-left">
+          <h3>Textile Software</h3>
+          <li>Textile Software to manage your entire Textile Manufacturing Business operations. Stay updated, manage
+            your textile manufacturing- production, quality, sales, finances & more.
+          </li>
+          <a href="retail.html" class="card-btn"> Read More</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="circle-item">
+      <div class="circle">
+        <img src="Images/import.png" alt="Jewellery">
+      </div>
+      <p>Import/Export Trading</p>
+      <div class="dropdown-panel">
+        <div class="dropdown-left">
+          <h3>Import/Export business</h3>
+          <li>Easy Implementation</li>
+          <li>Customizable</li>
+          <li>Collaborative</li>
+          <li>Business Booster</li>
+          <li>GST Compliant</li>
+
+          <a href="retail.html" class="card-btn"> Read More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- wholesales design end -->
+
+
+  <!-- mobile application design start -->
+  <div class="whole">
+    <h1 class="retail">
+      Mobile<span class="highlight-text1"> Applications</span>
+    </h1>
+  </div>
+
+  <div class="circle-container13">
+    <div class="circle-item">
+      <div class="circle">
+        <img src="Images/eorder.png" alt="eRetail">
+      </div>
+      <p>eRetail</p>
+    </div>
+
+    <div class="circle-item">
+      <div class="circle">
+        <img src="Images/eorder.png" alt="eOwner">
+      </div>
+      <p>eOwner</p>
+    </div>
+
+    <div class="circle-item">
+      <div class="circle">
+        <img src="/Images/eorder.png" alt="eOrder">
+      </div>
+      <p>eOrder</p>
+    </div>
+  </div>
+  <!-- mobile application design end -->
+
+  <!-- why choose erp bussiness start -->
+  <section class="slider-section">
+    <div class="slider-text">
+      <h2>Why ERP Software is Best for Your Business</h2>
+      <p>
+        In today's fast-paced digital world, efficiency, accuracy, and scalability are critical to business success. ERP
+        (Enterprise Resource Planning) software is a powerful solution that integrates all your core business
+        functions—such as sales, inventory, accounting, HR, and customer service—into a single, centralized system. This
+        eliminates the need for multiple disconnected tools and reduces manual errors. With real-time data access,
+        decision-making becomes faster and more informed. ERP streamlines operations, improves productivity, and
+        ultimately saves both time and money. Employees can focus on strategic tasks rather than repetitive manual work.
+        Moreover, ERP systems help enhance customer experience by keeping track of customer data, order history, and
+        support interactions. As your business grows, ERP grows with you, offering scalability and flexibility to adapt
+        to changing needs. It also ensures data security and helps maintain compliance with industry standards. In
+        short, ERP software is a smart, long-term investment that gives your business a competitive edge and prepares
+        you for sustainable growth.
+      </p>
+    </div>
+    <div class="slider-image">
+      <img src="/Images/erp12.png" alt="Business Analysis">
+    </div>
+  </section>
+  <!-- why choose erp business end -->
+
+  <!-- swastik associate design start -->
+
+  <div class="section">
+    <img src="Images/new-services-img.png" alt="Left Image">
+    <div class="text">
+      <h2>Business Software Solutions By Swastik Associate, Trusted by 2500+ Users in Nagpur - Vidharbha</h2>
+      <p>
+        We deals in Business Application Development, Sales and Support. We have readymeade Softwares available for
+        Pharmaceutical Industry, FMCG, POS , Garments, Mobile / Electronic Appliances business and more. Apart from the
+        Ready to go softwares we have built many custom made software as per customers requirements.
+      </p>
+    </div>
+  </div>
+
+  <div class="section right">
+    <div class="text">
+      <h2>Custom Made Software Solution for Every trade and Every Businesses</h2>
+      <p>
+
+        Thousands of Marg ERP Users are trusted Swastik Associate to manage their Business from different trades like
+        Pharmaceutical Distribution, Retail Chemist Shop,Departmental Store, FMCG Distribution, Manufacturing etc
+
+        We deals in Business Application Development, Sales and Support. We have readymeade Softwares available for
+        Pharmaceutical Industry, FMCG, POS , Garments, Mobile / Electronic Appliances business and more. Apart from the
+        Ready to go softwares we have built many custom made software as per customers requirements.
+      </p>
+    </div>
+    <img src="Images/services-img-right.png" alt="Right Image">
+  </div>
+
+  <!-- swastik associate design end -->
+
+  <!-- counter part start -->
+  <div class="counters">
+    <div class="counter-box">
+      <h3 id="exp" class="counter" data-target="15">0</h3>
+      <p>Years of Experience</p>
+    </div>
+    <div class="counter-box">
+      <h3 id="users" class="counter" data-target="2500">0</h3>
+      <p>Happy Users in Nagpur</p>
+    </div>
+    <div class="counter-box">
+      <h3 id="clients" class="counter" data-target="150">0</h3>
+      <p>Clients Support Calls Processing Daily </p>
+    </div>
+    <div class="counter-box">
+      <h3 id="satisfaction" class="counter" data-target="99">0</h3>
+      <p>Customer are Satisfied by us</p>
+    </div>
+  </div>
+  <!-- counter part end -->
+
+
+  <!-- Testimonial Start -->
+  <section class="testimonial-section">
+    <h2 class="testimonial-heading">Happy Clients</h2>
+
+    <div class="testimonial-container" id="testimonialContainer">
+      <div class="testimonial-card">
+        <img src="Images/das-logo.jpg" class="client-img">
+        <h3>Das Surgical</h3>
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <p></p>
+      </div>
+      <div class="testimonial-card">
+        <img src="Images/testi-1logo.jpg" class="client-img">
+        <h3>Royal Food Billing</h3>
+        <p>Good Services WeldoneE Support
+          New Royal Food Services Pvt Ltd.</p>
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <i class="fa fa-star" aria-hidden="true"></i>
+      </div>
+      <div class="testimonial-card">
+        <img src="Images/logo-meditrade.png" class="client-img">
+        <h3>Medi Trade </h3>
+        <p>Good Services Provides & Good Team Support.</p>
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <i class="fa fa-star" aria-hidden="true"></i>
+      </div>
+      <div class="testimonial-card">
+        <img src="Images/sk-desel.png" class="client-img">
+        <h3>S.K Diesel</h3>
+        <p>VGOOD SERVICE, GOOD PEOPLE. READY TO HELP.
+          THEY CALL YOU EVEN ON YOUR MISS CALL,THAT'S GREAT</p>
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <i class="fa fa-star" aria-hidden="true"></i>
+      </div>
+      <div class="testimonial-card">
+        <img src="Images/shreej-logo.png" class="client-img">
+        <h3>SHREE SAI DISTRIBUTOR (PRITI SURKAR)</h3>
+        <p>Marg software is very easy to use and good service.</p>
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <i class="fa fa-star" aria-hidden="true"></i>
+      </div>
+      <div class="testimonial-card">
+        <img src="Images/urhant-logo.png" class="client-img">
+        <h3>Arhant sales corporation</h3>
+        <p>MARG SERVICE IS VERY EXCELLENT , PROBLEMS RESOLVED VERY IMMEDIATELY</p>
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <i class="fa fa-star" aria-hidden="true"></i>
+      </div>
+    </div>
+
+    <!-- Dots -->
+    <div class="testimonial-dots" id="testimonialDots">
+      <span class="dot active" onclick="scrollToCard(0)"></span>
+      <span class="dot" onclick="scrollToCard(1)"></span>
+      <span class="dot" onclick="scrollToCard(2)"></span>
+      <span class="dot" onclick="scrollToCard(3)"></span>
+      <span class="dot" onclick="scrollToCard(4)"></span>
+      <span class="dot" onclick="scrollToCard(5)"></span>
+    </div>
+  </section>
+
+
+
+  <!-- Testimonial End -->
+
+
+  <!-- footer section Start -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section company">
+        <img src="Images/Sawastik Logo.png" alt="">
+        <h2>Swastik Associate</h2>
+        <p>Empowering Your Digital Future</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h3>Main Features</h3>
+        <ul>
+          <li><a href="#pricing-id">pricing plan</a></li>
+          <li><a href="#">Pharmacy Software</a></li>
+          <li><a href="#">Pharma Software</a></li>
+          <li><a href="#">AccountsPro Software</a></li>
+          <li><a href="#">Export Billing Software</a></li>
+          <li><a href="#">Margerp Billing Software</a></li>
+          <li><a href="#">Quick Heal Antivirus</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>More Services</h3>
+        <ul>
+          <li><a href="#">Kirana Grocery Billing</a></li>
+          <li><a href="#">Retail Software</a></li>
+          <li><a href="#">Supermarket Software</a></li>
+          <li><a href="#">Ayurvedic & Homeopathic</a></li>
+          <li><a href="#">Custom ERP Solution</a></li>
+          <li><a href="#">Plywood Software</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="retail.html">Products</a></li>
+          <li><a href="contact.html">Contact us</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <!-- footer section End -->
+
+  <!-- window popup design -->
+  <div class="floating-icons">
+    <a href="https://wa.me/919356163445" target="_blank" class="icon whatsapp" title="Chat on WhatsApp">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+    </a>
+  </div>
+
+
+</body>
+
+</html>
