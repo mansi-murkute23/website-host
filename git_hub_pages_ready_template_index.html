@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Portfolio — Fast, Clean, Responsive</title>
+  <meta name="description" content="A modern, responsive single-page website template ready for GitHub Pages & Cloudflare." />
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome (icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDd2RLFkYVb2xFqT5Q9O2D5H9F1mRkWUp8f25U0kQJ5kYh2n3f8kQf+z3sJ0m0rXl1ZK9kmG5xg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    :root{
+      --bg:#0b1220;         /* page background */
+      --card:#121a2b;       /* card background */
+      --muted:#a7b0c0;      /* muted text */
+      --text:#e7eefc;       /* primary text */
+      --brand:#6aa6ff;      /* accent color */
+      --brand-2:#8ef3ff;    /* secondary accent */
+      --ring: 0 0 0 3px rgba(106,166,255,.25);
+      --radius: 18px;
+      --shadow: 0 10px 30px rgba(0,0,0,.25);
+      --container: 1100px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0; background:var(--bg); color:var(--text);
+      font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,sans-serif;
+      line-height:1.6;
+    }
+
+    /* Layout */
+    .container{max-width:var(--container); margin:0 auto; padding:0 20px}
+    section{padding:80px 0}
+
+    /* Header */
+    .header{
+      position:sticky; top:0; z-index:1000;
+      backdrop-filter:saturate(180%) blur(12px);
+      background:linear-gradient(180deg, rgba(11,18,32,.85), rgba(11,18,32,.6));
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    .nav{display:flex; align-items:center; justify-content:space-between; height:64px}
+    .brand{display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.3px}
+    .brand i{color:var(--brand)}
+    .nav-links{display:flex; gap:20px}
+    .nav-links a{
+      color:var(--text); text-decoration:none; padding:8px 12px; border-radius:10px;
+      opacity:.9; transition:.2s ease;
+    }
+    .nav-links a:hover{background:rgba(255,255,255,.06)}
+
+    .menu-btn{display:none; background:none; border:0; color:var(--text); font-size:22px}
+
+    /* Hero */
+    .hero{display:grid; grid-template-columns:1.1fr .9fr; gap:40px; align-items:center}
+    .eyebrow{display:inline-block; padding:6px 10px; border:1px dashed rgba(255,255,255,.18); border-radius:999px; color:var(--muted); font-size:12px; letter-spacing:.3px}
+    h1{font-size:44px; line-height:1.1; margin:14px 0 8px}
+    .lead{color:var(--muted); font-size:18px}
+
+    .cta{display:flex; gap:12px; margin-top:22px}
+    .btn{
+      appearance:none; border:0; cursor:pointer; font-weight:700;
+      padding:12px 18px; border-radius:14px; transition:transform .05s ease, box-shadow .2s ease, background .2s ease;
+    }
+    .btn-primary{background:linear-gradient(135deg, var(--brand), var(--brand-2)); color:#09101f; box-shadow:var(--shadow)}
+    .btn-primary:active{transform:translateY(1px)}
+    .btn-ghost{background:transparent; color:var(--text); border:1px solid rgba(255,255,255,.12)}
+    .btn-ghost:hover{background:rgba(255,255,255,.06)}
+
+    .hero-card{
+      background:
+        radial-gradient(1200px 400px at -10% -50%, rgba(138,180,248,.15), transparent 50%),
+        radial-gradient(900px 300px at 120% 0%, rgba(142,243,255,.08), transparent 60%),
+        var(--card);
+      border:1px solid rgba(255,255,255,.06);
+      border-radius:var(--radius);
+      padding:26px; box-shadow:var(--shadow);
+    }
+    .hero-card img{width:100%; height:auto; border-radius:14px; display:block}
+
+    /* Features */
+    .grid{display:grid; gap:18px}
+    .grid-3{grid-template-columns:repeat(3,1fr)}
+    .card{
+      background:var(--card); border:1px solid rgba(255,255,255,.06);
+      border-radius:var(--radius); padding:20px; box-shadow:var(--shadow);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .card:hover{transform:translateY(-3px)}
+    .card h3{margin:8px 0 6px}
+    .muted{color:var(--muted)}
+    .icon{
+      width:42px; height:42px; display:grid; place-items:center; border-radius:12px;
+      background:linear-gradient(135deg, rgba(106,166,255,.2), rgba(142,243,255,.15));
+      border:1px solid rgba(255,255,255,.1)
+    }
+
+    /* Projects */
+    .grid-2{grid-template-columns:repeat(2,1fr)}
+    .project{display:flex; flex-direction:column; gap:14px}
+    .project img{width:100%; height:260px; object-fit:cover; border-radius:14px; border:1px solid rgba(255,255,255,.06)}
+
+    /* About */
+    .about{display:grid; grid-template-columns:1fr 1fr; gap:28px; align-items:center}
+    .about p{color:var(--muted)}
+
+    /* Contact */
+    form{display:grid; gap:14px}
+    input, textarea{
+      width:100%; padding:12px 14px; border-radius:12px; border:1px solid rgba(255,255,255,.12);
+      background:#0e172a; color:var(--text); outline:none; transition:.2s ease;
+    }
+    input:focus, textarea:focus{box-shadow:var(--ring); border-color:transparent}
+    textarea{min-height:140px; resize:vertical}
+
+    /* Footer */
+    footer{padding:30px 0 60px; color:var(--muted)}
+    .foot-row{display:flex; align-items:center; justify-content:space-between; gap:10px}
+
+    /* Utilities */
+    .center{text-align:center}
+    .spaced{margin-top:18px}
+
+    /* Responsive */
+    @media (max-width: 1024px){
+      .hero{grid-template-columns:1fr}
+      .about{grid-template-columns:1fr}
+      .grid-3{grid-template-columns:1fr 1fr}
+      .project img{height:220px}
+    }
+    @media (max-width: 720px){
+      .nav-links{ display:none; position:absolute; right:20px; top:64px; flex-direction:column; background:var(--card); border:1px solid rgba(255,255,255,.08); padding:10px; border-radius:14px; width:max-content}
+      .nav-links.show{display:flex}
+      .menu-btn{display:block}
+      h1{font-size:32px}
+      section{padding:64px 0}
+      .grid-3{grid-template-columns:1fr}
+      .grid-2{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <!-- ======================== HEADER ======================== -->
+  <header class="header">
+    <div class="container nav">
+      <div class="brand"><i class="fa-solid fa-bolt"></i> MyBrand</div>
+      <nav>
+        <button class="menu-btn" id="menuBtn" aria-label="Open Menu"><i class="fa-solid fa-bars"></i></button>
+        <div class="nav-links" id="navLinks">
+          <a href="#home">Home</a>
+          <a href="#features">Features</a>
+          <a href="#projects">Projects</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ======================== HERO ======================== -->
+  <section id="home" class="container">
+    <div class="hero">
+      <div>
+        <span class="eyebrow">Ready for GitHub Pages + Cloudflare</span>
+        <h1>Build a modern site — fast, secure, and gorgeous ✨</h1>
+        <p class="lead">This template is lightweight, responsive, and SEO-friendly. Deploy to GitHub Pages in minutes and add Cloudflare for speed & security.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="#contact"><i class="fa-solid fa-paper-plane"></i> Get a Quote</a>
+          <a class="btn btn-ghost" href="#projects"><i class="fa-solid fa-images"></i> See Work</a>
+        </div>
+        <p class="muted spaced">Tip: Replace text & images → push to GitHub → Settings → Pages → Select <strong>main</strong> branch.</p>
+      </div>
+      <div class="hero-card">
+        <img src="https://picsum.photos/seed/ui/900/560" alt="Preview" />
+        <p class="muted" style="margin:10px 2px 0">Dark UI, glassy header, soft shadows, rounded corners.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== FEATURES ======================== -->
+  <section id="features">
+    <div class="container">
+      <div class="center" style="margin-bottom:14px">
+        <span class="eyebrow">What you get</span>
+        <h2 style="margin:10px 0 0">Features</h2>
+        <p class="muted">Fast loads, clean code, easy customization.</p>
+      </div>
+      <div class="grid grid-3">
+        <div class="card">
+          <div class="icon"><i class="fa-solid fa-gauge-high"></i></div>
+          <h3>Performance</h3>
+          <p class="muted">Minified assets, lazy imagery, and semantic HTML for great lighthouse scores.</p>
+        </div>
+        <div class="card">
+          <div class="icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <h3>Security</h3>
+          <p class="muted">Works great behind Cloudflare with SSL, DDoS protection, and caching.</p>
+        </div>
+        <div class="card">
+          <div class="icon"><i class="fa-solid fa-mobile-screen"></i></div>
+          <h3>Responsive</h3>
+          <p class="muted">Looks sharp on phones, tablets, and big screens with fluid grids.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== PROJECTS ======================== -->
+  <section id="projects">
+    <div class="container">
+      <div class="center" style="margin-bottom:14px">
+        <span class="eyebrow">Recent work</span>
+        <h2 style="margin:10px 0 0">Projects</h2>
+        <p class="muted">Swap these placeholders with your own screenshots.</p>
+      </div>
+      <div class="grid grid-2">
+        <div class="project card">
+          <img src="https://picsum.photos/seed/app1/900/600" alt="Project 1" />
+          <div>
+            <h3>POS / Retail Suite</h3>
+            <p class="muted">Billing, inventory, and analytics dashboard with clean UX.</p>
+          </div>
+        </div>
+        <div class="project card">
+          <img src="https://picsum.photos/seed/app2/900/600" alt="Project 2" />
+          <div>
+            <h3>Healthcare Portal</h3>
+            <p class="muted">Appointments, e-prescriptions, and secure patient profiles.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== ABOUT ======================== -->
+  <section id="about">
+    <div class="container about">
+      <div>
+        <h2>About Me</h2>
+        <p>I'm a frontend developer who loves building fast, accessible, and beautiful web experiences. I specialize in HTML, CSS, and JavaScript — with a focus on clean design and smooth interactions.</p>
+        <ul class="muted">
+          <li>⚡ Performance-first approach</li>
+          <li>🔒 Security best practices</li>
+          <li>📱 Mobile-responsive layouts</li>
+        </ul>
+      </div>
+      <div class="card">
+        <img src="https://picsum.photos/seed/team/900/600" alt="Team / About image" style="width:100%; height:auto; border-radius:12px">
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== CONTACT ======================== -->
+  <section id="contact">
+    <div class="container">
+      <div class="center" style="margin-bottom:14px">
+        <span class="eyebrow">Let’s talk</span>
+        <h2 style="margin:10px 0 0">Contact</h2>
+        <p class="muted">This form is wired for FormSubmit (no backend needed).</p>
+      </div>
+
+      <!--
+        HOW TO ACTIVATE FORM (FormSubmit):
+        1) Replace YOUR_EMAIL@example.com with your email.
+        2) Optional: change _next to your thank-you URL.
+        3) Optional: set data-netlify="true" if you host on Netlify.
+      -->
+      <div class="grid grid-2">
+        <form action="https://formsubmit.co/YOUR_EMAIL@example.com" method="POST" class="card">
+          <!-- FormSubmit options -->
+          <input type="hidden" name="_subject" value="New enquiry from website" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_next" value="https://your-domain.com/thanks.html" />
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
+          <label>
+            Name*
+            <input type="text" name="name" placeholder="Your name" required>
+          </label>
+          <label>
+            Email*
+            <input type="email" name="email" placeholder="name@email.com" required>
+          </label>
+          <label>
+            Phone
+            <input type="text" name="phone" placeholder="+91 98765 43210">
+          </label>
+          <label>
+            Message*
+            <textarea name="message" placeholder="Tell me about your project" required></textarea>
+          </label>
+
+          <button class="btn btn-primary" type="submit"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+          <p class="muted" style="margin:6px 2px 0">By submitting, you agree to be contacted back.</p>
+        </form>
+
+        <div class="card">
+          <h3>Contact Info</h3>
+          <p class="muted">Prefer WhatsApp or Instagram? Link your profiles here.</p>
+          <p class="muted"><i class="fa-solid fa-location-dot"></i> Nagpur, India</p>
+          <p class="muted"><i class="fa-brands fa-whatsapp"></i> <a style="color:var(--text)" href="https://wa.me/919999999999" target="_blank" rel="noreferrer">+91 99999 99999</a></p>
+          <p class="muted"><i class="fa-brands fa-instagram"></i> <a style="color:var(--text)" href="https://instagram.com/yourid" target="_blank" rel="noreferrer">@yourid</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== FOOTER ======================== -->
+  <footer>
+    <div class="container foot-row">
+      <div>© <span id="y"></span> MyBrand. All rights reserved.</div>
+      <div class="muted">Made with <i class="fa-solid fa-heart"></i> & GitHub Pages</div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+    menuBtn?.addEventListener('click', ()=> navLinks.classList.toggle('show'));
+
+    // Close menu on link click (mobile)
+    navLinks?.querySelectorAll('a').forEach(a=> a.addEventListener('click', ()=> navLinks.classList.remove('show')));
+
+    // Year in footer
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Small reveal on scroll (no libs)
+    const observer = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){ e.target.style.transform='translateY(0)'; e.target.style.opacity='1'; }
+      })
+    },{threshold:.1});
+    document.querySelectorAll('.card, .hero-card, .project').forEach(el=>{
+      el.style.transform='translateY(10px)';
+      el.style.opacity='.001';
+      el.style.transition='transform .5s ease, opacity .5s ease';
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
